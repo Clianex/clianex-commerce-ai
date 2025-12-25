@@ -1,21 +1,12 @@
-import { ClerkProvider, RedirectToSignIn, RedirectToUserProfile } from '@clerk/nextjs';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+// pages/_app.js
+import { ClerkProvider } from '@clerk/nextjs';
+import NavBar from '../components/NavBar';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (!window.location.origin.includes('localhost')) {
-      router.push('/404');
-    }
-  }, []);
-
   return (
-    <ClerkProvider
-      frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}
-      navigate={(to) => router.push(to)}
-    >
+    <ClerkProvider frontendApi={process.env.NEXT_PUBLIC_CLERK_FRONTEND_API}>
+      <NavBar />
       <Component {...pageProps} />
     </ClerkProvider>
   );
