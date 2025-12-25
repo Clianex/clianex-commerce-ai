@@ -1,13 +1,19 @@
 // app/dashboard.jsx
-import { auth } from "@clerk/nextjs/server";
+import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 export default function DashboardPage() {
-  const { userId } = auth();
+  const { userId } = auth(); // Devuelve null si no está logueado
 
   if (!userId) {
     redirect("/login");
   }
 
-  return <h1>Dashboard privado Clianex 🚀</h1>;
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center">
+      <h1 className="text-3xl font-bold">Dashboard Privado Clianex 🚀</h1>
+      <p>Bienvenido, usuario autenticado con Clerk</p>
+    </div>
+  );
 }
+
