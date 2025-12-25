@@ -7,14 +7,15 @@ const SignUpPage = () => {
   const { isSignedIn } = useAuth();
   const router = useRouter();
 
+  // Redirigir a perfil si el usuario ya está autenticado
   useEffect(() => {
     if (isSignedIn) {
-      router.push('/profile');  // O la página que desees redirigir al usuario
+      router.push('/profile');
     }
   }, [isSignedIn, router]);
 
   return (
-    <div>
+    <div style={{ maxWidth: '500px', margin: '50px auto', padding: '20px' }}>
       <h1>Crear una cuenta</h1>
       <SignUp />
     </div>
