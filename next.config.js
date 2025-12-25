@@ -16,8 +16,8 @@ const nextConfig = {
     appDir: true, // Asegúrate de habilitar el App Router
   },
   env: {
-    NEXT_PUBLIC_CLERK_FRONTEND_API: "https://api.clerk.dev",
-    CLERK_API_KEY: "tu-clerk-api-key-backend", // Sustituye con tu API key de backend
+    NEXT_PUBLIC_CLERK_FRONTEND_API: "pk_test_d2hvbGUta2luZ2Zpc2gtMjQuY2xlcmsuYWNjb3VudHMuZGV2JA",
+    CLERK_API_KEY: "sk_test_tCb5ez2d6eIFeozaAHekKfo1OqnqI6HdOc55z1zgf8", // Sustituye con tu API key de backend
   },
 };
 
