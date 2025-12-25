@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    appDir: true, // Habilita el App Router en Next.js
+    appDir: true,  // Esto es importante para habilitar las rutas de tipo App Router
   },
 };
 
