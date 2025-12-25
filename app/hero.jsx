@@ -11,7 +11,7 @@ export default function Hero() {
           y escalar tu negocio online.
         </p>
         <a
-          href="/register"
+          href="app/register"
           className="bg-yellow-500 text-black py-3 px-6 rounded-full text-xl hover:bg-yellow-600 transition duration-300"
         >
           Regístrate Ahora
