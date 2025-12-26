@@ -2,7 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  @apply bg-white text-gray-900;
+/* Global reset */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
 }
 
+/* Smooth rendering */
+* {
+  box-sizing: border-box;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
