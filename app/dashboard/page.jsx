@@ -1,13 +1,9 @@
-// app/dashboard.jsx
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 export default function DashboardPage() {
-  const { userId } = auth(); // Devuelve null si no está logueado
-
-  if (!userId) {
-    redirect("/login");
-  }
+  const { userId } = auth();
+  if (!userId) redirect("/login");
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
@@ -16,4 +12,3 @@ export default function DashboardPage() {
     </div>
   );
 }
-
