@@ -1,47 +1,45 @@
-const PRODUCTS = {
-  "ai-viral-trends": {
-    name: "AI Viral Trends",
-    description:
-      "Sistema de IA que detecta tendencias virales antes de que exploten.",
-    price: "29€/mes",
-  },
-  "auto-blogging-ai": {
-    name: "Auto Blogging AI",
-    description:
-      "Publica artículos SEO automáticamente sin intervención humana.",
-    price: "39€/mes",
-  },
-  "smart-providers": {
-    name: "Smart Providers",
-    description:
-      "IA que encuentra proveedores óptimos para tu negocio.",
-    price: "19€/mes",
-  },
-};
+import { marketplaceItems } from "@/lib/data/marketplace";
+import Link from "next/link";
 
-export default function ProductPage({ params }) {
-  const product = PRODUCTS[params.slug];
+export default function MarketplaceItemPage({ params }) {
+  const item = marketplaceItems.find(
+    (i) => i.slug === params.slug
+  );
 
-  if (!product) {
+  if (!item) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <h1 className="text-2xl">Producto no encontrado</h1>
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Módulo no encontrado</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-black text-white px-8 py-16">
-      <h1 className="text-4xl font-bold">{product.name}</h1>
-      <p className="text-white/70 mt-4 max-w-xl">
-        {product.description}
+    <div className="min-h-screen px-8 py-16 max-w-3xl mx-auto">
+      <span className="text-xs border border-white/20 px-3 py-1 rounded-full text-white/60">
+        {item.tag}
+      </span>
+
+      <h1 className="text-4xl font-bold mt-4 mb-4">
+        {item.name}
+      </h1>
+
+      <p className="text-white/70 mb-8">
+        {item.description}
       </p>
 
-      <p className="mt-6 text-2xl font-bold">{product.price}</p>
+      <div className="flex items-center gap-4">
+        <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold">
+          Activar módulo
+        </button>
 
-      <button className="mt-8 bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
-        Activar módulo
-      </button>
+        <Link
+          href="/marketplace"
+          className="text-white/60 hover:text-white"
+        >
+          ← Volver
+        </Link>
+      </div>
     </div>
   );
 }
