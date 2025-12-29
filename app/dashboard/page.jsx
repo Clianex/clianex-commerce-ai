@@ -1,11 +1,18 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
-<SignedIn>
-  {/* Contenido privado */}
-  <UserButton afterSignOutUrl="/" />
-</SignedIn>
+export default function DashboardPage() {
+  return (
+    <main style={{ padding: 40 }}>
+      <SignedIn>
+        <h1>📊 Dashboard</h1>
+        <p>Bienvenido a Clianex Commerce AI</p>
+        <UserButton afterSignOutUrl="/" />
+      </SignedIn>
 
-<SignedOut>
-  {/* Contenido para usuarios no autenticados */}
-  <SignInButton />
-</SignedOut>
+      <SignedOut>
+        <p>Debes iniciar sesión para acceder al dashboard.</p>
+        <SignInButton />
+      </SignedOut>
+    </main>
+  );
+}
