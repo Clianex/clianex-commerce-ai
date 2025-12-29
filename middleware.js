@@ -1,9 +1,7 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware } from "@clerk/nextjs";
 
 export default clerkMiddleware();
 
 export const config = {
-  matcher: [
-    "/dashboard(.*)",
-  ],
+  matcher: ["/dashboard(.*)"],
 };
