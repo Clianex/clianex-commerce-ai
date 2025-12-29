@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main style={{ padding: 40 }}>
       <h1>🚀 Clianex Commerce AI</h1>
-      <p>Plataforma serverless de comercio impulsado por IA.</p>
+      <p>Plataforma serverless de comercio impulsado por IA</p>
 
       <nav style={{ marginTop: 20 }}>
         <ul>
