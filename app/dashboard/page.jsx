@@ -1,11 +1,8 @@
-import { auth } from "@clerk/nextjs/server";
-
-export default function Dashboard() {
-  const { userId } = auth();
+export default function Home() {
   return (
     <main style={{ padding: 40 }}>
-      <h1>Dashboard</h1>
-      <p>User: {userId}</p>
+      <h1>🚀 Clianex Commerce AI</h1>
+      <p>Plataforma serverless de comercio impulsado por IA.</p>
     </main>
   );
 }
