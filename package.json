@@ -7,12 +7,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^16.1.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@clerk/nextjs": "^6.36.5",
-    "tailwindcss": "^3.3.2",
-    "postcss": "^8.4.21",
-    "autoprefixer": "^10.4.14"
+    "next": "16.1.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@clerk/nextjs": "^6.36.5"
   }
 }
