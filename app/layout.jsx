@@ -3,7 +3,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
   title: "Clianex Commerce AI",
-  description: "AI-powered commerce platform",
+  description: "Plataforma serverless de comercio impulsado por IA",
 };
 
 export default function RootLayout({ children }) {
