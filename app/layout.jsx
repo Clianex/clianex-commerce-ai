@@ -1,10 +1,5 @@
-import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-
-export const metadata = {
-  title: "Clianex Commerce AI",
-  description: "Plataforma serverless de comercio impulsado por IA",
-};
+import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
