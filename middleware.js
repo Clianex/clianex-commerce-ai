@@ -7,10 +7,7 @@ export default clerkMiddleware({
 
 export const config = {
   matcher: [
-    /*
-      Protegemos SOLO dashboard y sus subrutas.
-      Dejamos TODO lo demás fuera del middleware.
-    */
     "/dashboard/:path*",
+    "/((?!_next|favicon.ico|public|images|api).*)",
   ],
 };
