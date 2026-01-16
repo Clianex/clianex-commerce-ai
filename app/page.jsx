@@ -1,21 +1,28 @@
-import Link from "next/link";
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <main style={{ padding: 40 }}>
-      <h1>🚀 Clianex Commerce AI</h1>
-      <p>Plataforma serverless de comercio impulsado por IA</p>
+    <div className="max-w-7xl mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold mb-6">
+        Clianex Commerce AI
+      </h1>
+      <p className="text-lg text-gray-700 max-w-2xl mb-8">
+        La plataforma serverless que automatiza y potencia tu e-commerce con IA,
+        agentes autónomos y crecimiento inteligente.
+      </p>
 
-      <nav style={{ marginTop: 20 }}>
-        <ul>
-          <li><Link href="/marketplace">Marketplace</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/blog">Blog</Link></li>
-          <li><Link href="/dashboard">Dashboard</Link></li>
-          <li><Link href="/sign-in">Login</Link></li>
-          <li><Link href="/sign-up">Register</Link></li>
-        </ul>
-      </nav>
-    </main>
+      <div className="flex gap-4">
+        <a
+          href="/register"
+          className="bg-black text-white px-6 py-3 rounded-lg"
+        >
+          Comenzar ahora
+        </a>
+        <a
+          href="/marketplace"
+          className="border px-6 py-3 rounded-lg"
+        >
+          Ver Marketplace
+        </a>
+      </div>
+    </div>
   );
 }
