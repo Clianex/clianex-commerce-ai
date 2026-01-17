@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+ import QuickBuyButton from "@/components/QuickBuyButton";
  import ShoppableImage from "@/components/ShoppableImage";
  import FrequentlyBoughtTogether from "@/components/FrequentlyBoughtTogether";
 const INITIAL_ITEMS = Array.from({ length: 6 }, (_, i) => ({
@@ -38,6 +39,7 @@ export default function MarketplacePage() {
             >
               Ver más →
             </Link>
+         <QuickBuyButton productId={item.id} />
           </div>
         ))}
         <ShoppableImage
