@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
  import ShoppableImage from "@/components/ShoppableImage";
+ import FrequentlyBoughtTogether from "@/components/FrequentlyBoughtTogether";
 const INITIAL_ITEMS = Array.from({ length: 6 }, (_, i) => ({
   id: `module-${i + 1}`,
   name: `Módulo #${i + 1}`,
@@ -47,6 +48,8 @@ export default function MarketplacePage() {
   ]}
 />
         </div>
+    <FrequentlyBoughtTogether />
+
       <div className="text-center mt-10">
         <button
           onClick={loadMore}
