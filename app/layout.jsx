@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
-
+<FreeShippingBar />
 export const metadata = {
   title: "Clianex Commerce AI",
   description: "Plataforma serverless de comercio impulsado por IA",
@@ -11,6 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body>
         <Navbar />
+        import FreeShippingBar from "../components/FreeShippingBar";
         import CookieBar from "../components/CookieBar";
         <main className="min-h-screen pt-16">
           {children}
