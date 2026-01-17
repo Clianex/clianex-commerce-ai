@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import CookieBar from "../components/CookieBar";
 import FreeShippingBar from "../components/FreeShippingBar";
 import PromotionTimer from "../components/PromotionTimer";
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         {/* Elementos de conversión globales */}
         <FreeShippingBar />
         <PromotionTimer />
+        <CookieBar />
 
         <main>{children}</main>
       </body>
