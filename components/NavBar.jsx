@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-
+import PredictiveSearch from "./PredictiveSearch";
 export default function NavBar() {
   return (
     <nav className="w-full bg-white border-b border-gray-200">
@@ -38,7 +38,7 @@ export default function NavBar() {
               Dashboard
             </Link>
           </div>
-
+<PredictiveSearch />
           {/* Autenticación / Perfil */}
           <div className="flex items-center">
             <SignedOut>
