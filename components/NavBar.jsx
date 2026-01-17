@@ -3,13 +3,14 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import PredictiveSearch from "./PredictiveSearch";
 import FreeShippingBar from "./FreeShippingBar";
 import MegaMenu from "./MegaMenu";
+import GeoBanner from "./GeoBanner";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function NavBar() {
   return (
     <>
-      <FreeShippingBar />
-
+    <GeoBanner />
+    <FreeShippingBar />
       <nav className="sticky top-0 bg-white border-b shadow-sm z-50">
         <div className="container h-16 flex items-center justify-between">
           <Link href="/" className="font-bold text-lg text-blue-600">
