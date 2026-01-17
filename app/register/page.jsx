@@ -1,10 +1,14 @@
-export default function Register() {
+import { SignUp } from "@clerk/nextjs";
+
+export default function RegisterPage() {
   return (
-    <div className="clianex-container py-16 text-center">
-      <h1 className="text-3xl font-bold">Crear cuenta en Clianex</h1>
-      <p className="mt-4 text-gray-600">
-        Usa el botón de Clerk para registrarte.
-      </p>
+    <div className="flex min-h-screen items-center justify-center bg-gray-50">
+      <div className="bg-white p-8 rounded-xl shadow">
+        <h1 className="text-2xl font-bold text-center mb-6">
+          Crear cuenta en Clianex
+        </h1>
+        <SignUp path="/register" routing="path" signInUrl="/sign-in" />
+      </div>
     </div>
   );
 }
