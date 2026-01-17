@@ -2,9 +2,8 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import CookieBar from "../components/CookieBar";
 import FreeShippingBar from "../components/FreeShippingBar";
-import PromotionTimer from "../components/PromotionTimer";
 import RecentSalesToast from "@/components/RecentSalesToast";
-
+import PromotionTimer from "@/components/PromotionTimer";
 export const metadata = {
   title: "Clianex Commerce",
   description: "Plataforma de comercio impulsada por IA",
@@ -17,13 +16,11 @@ export default function RootLayout({ children }) {
         <Navbar />
 
         {/* Elementos de conversión globales */}
-        <FreeShippingBar />
-        <RecentSalesToast />
-        <PromotionTimer />
-        
+       <PromotionTimer minutes={20} /> 
+       <RecentSalesToast />  
+       <FreeShippingBar />
+       <main>{children}</main> 
         <CookieBar />
-
-        <main>{children}</main>
       </body>
     </html>
   );
