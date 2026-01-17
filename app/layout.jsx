@@ -11,9 +11,11 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body>
         <Navbar />
+        import CookieBar from "../components/CookieBar";
         <main className="min-h-screen pt-16">
           {children}
         </main>
+        <CookieBar />
       </body>
     </html>
   );
