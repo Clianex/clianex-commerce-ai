@@ -1,10 +1,14 @@
-export default function SignIn() {
+import { SignIn } from "@clerk/nextjs";
+
+export default function SignInPage() {
   return (
-    <div className="clianex-container py-16 text-center">
-      <h1 className="text-3xl font-bold">Iniciar sesión</h1>
-      <p className="mt-4 text-gray-600">
-        Usa Clerk para iniciar sesión.
-      </p>
+    <div className="flex min-h-screen items-center justify-center bg-gray-50">
+      <div className="bg-white p-8 rounded-xl shadow">
+        <h1 className="text-2xl font-bold text-center mb-6">
+          Iniciar sesión
+        </h1>
+        <SignIn path="/sign-in" routing="path" signUpUrl="/register" />
+      </div>
     </div>
   );
 }
