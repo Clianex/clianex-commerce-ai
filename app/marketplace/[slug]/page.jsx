@@ -1,3 +1,5 @@
+import StickyAddToCart from "@/components/StickyAddToCart";
+
 export default function ProductPage({ params }) {
   const { slug } = params;
 
@@ -7,21 +9,19 @@ export default function ProductPage({ params }) {
         Módulo: {slug.replace("-", " ")}
       </h1>
 
-      <div className="bg-white p-6 rounded-xl shadow">
+      <div className="bg-white p-6 rounded-xl shadow mb-24">
         <p className="text-gray-700 mb-4">
-          Este es un módulo del Marketplace de Clianex impulsado por IA.
+          Este módulo se integra automáticamente con tu tienda y optimiza ventas con IA.
         </p>
 
-        <ul className="list-disc ml-5 text-gray-600">
+        <ul className="list-disc ml-5 text-gray-600 space-y-2">
           <li>Integración automática</li>
           <li>Configuración sin código</li>
           <li>Escalable y serverless</li>
         </ul>
-
-        <button className="mt-6 bg-blue-600 text-white px-5 py-2 rounded-lg">
-          Instalar módulo
-        </button>
       </div>
+
+      <StickyAddToCart />
     </div>
   );
 }
