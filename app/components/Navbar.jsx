@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import UserMenu from "./UserMenu";
+import PredictiveSearch from "./PredictiveSearch";
 
 export default function Navbar() {
   return (
@@ -41,6 +42,8 @@ export default function Navbar() {
           </Link>
 
           <UserMenu />
+          <PredictiveSearch />
+
         </div>
       </div>
     </nav>
