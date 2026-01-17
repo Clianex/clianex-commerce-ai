@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import PredictiveSearch from "./PredictiveSearch";
 import FreeShippingBar from "./FreeShippingBar";
 import MegaMenu from "./MegaMenu";
 
@@ -20,6 +21,7 @@ export default function NavBar() {
                 Marketplace ▾
               </span>
               <MegaMenu />
+              <PredictiveSearch />
             </div>
 
             <Link href="/blog" className="hover:text-blue-600">
