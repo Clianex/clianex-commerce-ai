@@ -3,6 +3,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import PredictiveSearch from "./PredictiveSearch";
 import FreeShippingBar from "./FreeShippingBar";
 import MegaMenu from "./MegaMenu";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function NavBar() {
   return (
@@ -33,7 +34,7 @@ export default function NavBar() {
             <Link href="/dashboard" className="hover:text-blue-600">
               Dashboard
             </Link>
-
+            <LanguageSwitcher />
             <SignedOut>
               <SignInButton>
                 <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
