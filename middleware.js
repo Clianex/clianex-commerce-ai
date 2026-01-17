@@ -1,13 +1,18 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-export default clerkMiddleware({
-  publishableKey: process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,
-  secretKey: process.env.CLERK_SECRET_KEY,
+const isProtectedRoute = createRouteMatcher([
+  "/dashboard(.*)",
+  "/modules(.*)"
+]);
+
+export default clerkMiddleware((auth, req) => {
+  if (isProtectedRoute(req)) {
+    auth().protect();
+  }
 });
 
 export const config = {
   matcher: [
-    "/dashboard/:path*",
-    "/((?!_next|favicon.ico|api|sign-in|sign-up).*)",
-  ],
+    "/((?!_next|favicon.ico|public).*)"
+  ]
 };
