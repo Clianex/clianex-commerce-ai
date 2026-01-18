@@ -6,5 +6,6 @@ export const config = {
   matcher: [
     "/dashboard/:path*",
     "/marketplace/:path*",
+    "/((?!_next|favicon.ico|api|sign-in|sign-up).*)",
   ],
 };
