@@ -2,17 +2,18 @@
 module.exports = {
   content: [
     "./app/**/*.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
-    "./modules/**/*.{js,jsx,ts,tsx}"
+    "./components/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     extend: {
       colors: {
-        brand: {
-          DEFAULT: "#0F172A",
-          light: "#1E293B",
-        },
+        dark: "#0F172A",
+        card: "#111827",
+        primary: "#38BDF8",
       },
+      borderRadius: {
+        xl: "1rem",
+      }
     },
   },
   plugins: [],
