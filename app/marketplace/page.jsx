@@ -1,64 +1,17 @@
-"use client";
-
-import { useState } from "react";
-import Link from "next/link";
- import QuickBuyButton from "@/components/QuickBuyButton";
- import ShoppableImage from "@/components/ShoppableImage";
- import FrequentlyBoughtTogether from "@/components/FrequentlyBoughtTogether";
-const INITIAL_ITEMS = Array.from({ length: 6 }, (_, i) => ({
-  id: `module-${i + 1}`,
-  name: `Módulo #${i + 1}`,
-}));
-
-export default function MarketplacePage() {
-  const [items, setItems] = useState(INITIAL_ITEMS);
-
-  const loadMore = () => {
-    const more = Array.from({ length: 3 }, (_, i) => ({
-      id: `module-${items.length + i + 1}`,
-      name: `Módulo #${items.length + i + 1}`,
-    }));
-
-    setItems((prev) => [...prev, ...more]);
-  };
-
+export default function Marketplace() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-6">Marketplace</h1>
+    <div className="pt-6">
+      <h1 className="text-4xl font-bold mb-6">Marketplace</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {items.map((item) => (
-          <div key={item.id} className="bg-white p-6 rounded-xl shadow">
-            <h3 className="font-bold">{item.name}</h3>
-            <p className="text-gray-600 text-sm mt-2">
-              Solución impulsada por IA para comercio.
+        {["Tendencias AI", "Proveedores Premium", "Automación Avanzada"].map((item) => (
+          <div key={item} className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+            <h2 className="text-xl font-semibold mb-2">{item}</h2>
+            <p className="text-gray-400 text-sm">
+              Módulo inteligente para optimizar tu comercio con datos en tiempo real.
             </p>
-            <Link
-              href={`/marketplace/${item.id}`}
-              className="inline-block mt-4 text-blue-600 text-sm"
-            >
-              Ver más →
-            </Link>
-         <QuickBuyButton productId={item.id} />
           </div>
         ))}
-        <ShoppableImage
-  image="/store-example.jpg"
-  hotspots={[
-    { x: "30%", y: "40%", label: "Checkout Optimizer" },
-    { x: "65%", y: "55%", label: "AI Recommender" },
-  ]}
-/>
-        </div>
-    <FrequentlyBoughtTogether />
-
-      <div className="text-center mt-10">
-        <button
-          onClick={loadMore}
-          className="bg-blue-600 text-white px-5 py-2 rounded-lg"
-        >
-          Cargar más
-        </button>
       </div>
     </div>
   );

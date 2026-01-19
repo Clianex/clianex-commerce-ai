@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/dashboard/layout.jsx"],"sourcesContent":["import { SignedIn, SignedOut, RedirectToSignIn, UserButton } from \"@clerk/nextjs\";\n\nexport default function DashboardLayout({ children }) {\n  return (\n    <>\n      <SignedIn>\n        <header style={{ padding: 20, borderBottom: \"1px solid #ddd\" }}>\n          <strong>Clianex Commerce AI</strong>\n          <div style={{ float: \"right\" }}>\n            <UserButton afterSignOutUrl=\"/\" />\n          </div>\n        </header>\n        <main style={{ padding: 40 }}>{children}</main>\n      </SignedIn>\n\n      <SignedOut>\n        <RedirectToSignIn />\n      </SignedOut>\n    </>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;AAAA;AAAA;;;AAEe,SAAS,gBAAgB,EAAE,QAAQ,EAAE;IAClD,qBACE;;0BACE,kSAAC,yOAAQ;;kCACP,kSAAC;wBAAO,OAAO;4BAAE,SAAS;4BAAI,cAAc;wBAAiB;;0CAC3D,kSAAC;0CAAO;;;;;;0CACR,kSAAC;gCAAI,OAAO;oCAAE,OAAO;gCAAQ;0CAC3B,cAAA,kSAAC,wPAAU;oCAAC,iBAAgB;;;;;;;;;;;;;;;;;kCAGhC,kSAAC;wBAAK,OAAO;4BAAE,SAAS;wBAAG;kCAAI;;;;;;;;;;;;0BAGjC,kSAAC,0OAAS;0BACR,cAAA,kSAAC,mQAAgB;;;;;;;;;;;;AAIzB"}}]
+}

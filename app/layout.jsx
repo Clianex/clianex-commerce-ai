@@ -1,26 +1,19 @@
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import CookieBar from "../components/CookieBar";
-import FreeShippingBar from "../components/FreeShippingBar";
-import RecentSalesToast from "@/components/RecentSalesToast";
-import PromotionTimer from "@/components/PromotionTimer";
-export const metadata = {
-  title: "Clianex Commerce",
-  description: "Plataforma de comercio impulsada por IA",
-};
+import NavBar from "../components/NavBar";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className="bg-gray-50">
-        <Navbar />
-
-        {/* Elementos de conversión globales */}
-       <PromotionTimer minutes={20} /> 
-       <RecentSalesToast />  
-       <FreeShippingBar />
-       <main>{children}</main> 
-        <CookieBar />
+      <body className="bg-[#0b0f1a] text-gray-100">
+        <ClerkProvider
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+        >
+          <NavBar />
+          <main className="max-w-7xl mx-auto px-6 pt-24">
+            {children}
+          </main>
+        </ClerkProvider>
       </body>
     </html>
   );
