@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.36.5",
+<<<<<<< HEAD
     "next": "^16.1.1-canary.35",
+=======
+    "next": "16.1.1",
+>>>>>>> fbc312ff808e9d9bcbe1b6bb3c2a294189aa02d7
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

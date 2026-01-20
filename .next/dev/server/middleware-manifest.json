@@ -3,27 +3,16 @@
   "middleware": {
     "/": {
       "files": [
-        "server/edge/chunks/3a01d_next_9981f775._.js",
-        "server/edge/chunks/3a01d_@clerk_shared_dist_runtime_3c6e3098._.js",
-        "server/edge/chunks/3a01d_@clerk_backend_dist_b303a943._.js",
-        "server/edge/chunks/3a01d_@clerk_nextjs_dist_esm_26ca5692._.js",
+        "server/edge/chunks/3a01d_next_dist_8b5e35cb._.js",
         "server/edge/chunks/[root-of-the-server]__ce898aa0._.js",
-        "server/edge/chunks/9c018_next_dist_esm_build_templates_edge-wrapper_4af1a3f6.js"
+        "server/edge/chunks/9c018_next_dist_esm_build_templates_edge-wrapper_2b5f9f21.js"
       ],
       "name": "middleware",
       "page": "/",
       "matchers": [
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?!_next|favicon.ico|public).*))(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/((?!_next|favicon.ico|public).*)"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dashboard(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/dashboard/:path*"
-        },
-        {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/marketplace(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
-          "originalSource": "/marketplace/:path*"
+          "regexp": "^/.*$",
+          "originalSource": "/:path*"
         }
       ],
       "wasm": [],
