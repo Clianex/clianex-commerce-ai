@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/dashboard/page.jsx"],"sourcesContent":["\nexport default function Dashboard() {\n  return (\n    <div className=\"space-y-4\">\n      <h1 className=\"text-2xl font-semibold text-white\">Dashboard</h1>\n      <p>Panel principal.</p>\n      <div className=\"bg-slate-900 p-4 rounded-xl border border-slate-800\">\n        Métricas y módulos aparecerán aquí.\n      </div>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;AACe,SAAS;IACtB,qBACE,kSAAC;QAAI,WAAU;;0BACb,kSAAC;gBAAG,WAAU;0BAAoC;;;;;;0BAClD,kSAAC;0BAAE;;;;;;0BACH,kSAAC;gBAAI,WAAU;0BAAsD;;;;;;;;;;;;AAK3E"}}]
+}

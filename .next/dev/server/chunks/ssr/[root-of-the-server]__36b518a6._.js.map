@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 24, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/dashboard/page.jsx"],"sourcesContent":["import { currentUser } from \"@clerk/nextjs/server\";\n\nexport default async function DashboardPage() {\n  const user = await currentUser();\n\n  if (!user) {\n    return <p>No autorizado</p>;\n  }\n\n  return (\n    <div>\n      <h1 className=\"text-2xl font-bold\">Dashboard</h1>\n      <p className=\"mt-4\">\n        Bienvenido, {user.firstName || \"usuario\"}.\n      </p>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,eAAe;IAC5B,MAAM,OAAO,MAAM,IAAA,6PAAW;IAE9B,IAAI,CAAC,MAAM;QACT,qBAAO,kSAAC;sBAAE;;;;;;IACZ;IAEA,qBACE,kSAAC;;0BACC,kSAAC;gBAAG,WAAU;0BAAqB;;;;;;0BACnC,kSAAC;gBAAE,WAAU;;oBAAO;oBACL,KAAK,SAAS,IAAI;oBAAU;;;;;;;;;;;;;AAIjD"}}]
-}

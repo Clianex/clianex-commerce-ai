@@ -3,26 +3,33 @@
   "middleware": {
     "/": {
       "files": [
-        "server/edge/chunks/3a01d_next_dist_8b5e35cb._.js",
+        "server/edge/chunks/3a01d_next_9981f775._.js",
+        "server/edge/chunks/3a01d_@clerk_shared_dist_runtime_3c6e3098._.js",
+        "server/edge/chunks/3a01d_@clerk_backend_dist_b303a943._.js",
+        "server/edge/chunks/3a01d_@clerk_nextjs_dist_esm_26ca5692._.js",
         "server/edge/chunks/[root-of-the-server]__ce898aa0._.js",
-        "server/edge/chunks/9c018_next_dist_esm_build_templates_edge-wrapper_2b5f9f21.js"
+        "server/edge/chunks/9c018_next_dist_esm_build_templates_edge-wrapper_4af1a3f6.js"
       ],
       "name": "middleware",
       "page": "/",
       "matchers": [
         {
-          "regexp": "^/.*$",
-          "originalSource": "/:path*"
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dashboard(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/dashboard/:path*"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?!_next|static|favicon.ico).*))(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/((?!_next|static|favicon.ico).*)"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
         "__NEXT_BUILD_ID": "development",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "Zx6o9ULgHTuDJDC/xZmFvA08W9odidKN06NPjJ2TYRk=",
-        "__NEXT_PREVIEW_MODE_ID": "dffa9d5bb5966aeea22d3bd0ffa0bb6f",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "003aebfaa70473bd0510fdcb02b3ae0c969d36e253aed91f3846e2de240f6bc9",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "021fa0c0b29223fdef74a34d9f83ebcbaea356ef13a6e0264cafc7b9eda50313"
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "8hscUbNKCLyHtAmxEuEygACn6N9jnFh+G/pmkKHCTRw=",
+        "__NEXT_PREVIEW_MODE_ID": "462b5f1d961b74f547328f9d432f3dd1",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "79697873646963aa7f07429c2ef28a747e0748c33079aab9cc056ad9a5823c57",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "158babd8d3bd6a78a9f5d3dfeac22b6536dddebe7eea2d7fb05a96aa33e17b8b"
       }
     }
   },

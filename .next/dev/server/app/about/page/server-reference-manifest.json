@@ -1,0 +1,110 @@
+{
+  "node": {
+    "00121b107e6ce0567365273b5f5b4f144624f450a5": {
+      "workers": {
+        "app/about/page": {
+          "moduleId": "[project]/Documents/GitHub/clianex-commerce-ai/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "collectKeylessMetadata",
+          "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
+        }
+      },
+      "layer": {
+        "app/about/page": "rsc"
+      },
+      "exportedName": "collectKeylessMetadata",
+      "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
+    },
+    "40512f5c4673f786808f2c07853b3cc8a184a4fd22": {
+      "workers": {
+        "app/about/page": {
+          "moduleId": "[project]/Documents/GitHub/clianex-commerce-ai/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "formatMetadataHeaders",
+          "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
+        }
+      },
+      "layer": {
+        "app/about/page": "rsc"
+      },
+      "exportedName": "formatMetadataHeaders",
+      "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js"
+    },
+    "00a0e71a5fec5ddc4a31ccd8b2d92a1a56f7d70cf0": {
+      "workers": {
+        "app/about/page": {
+          "moduleId": "[project]/Documents/GitHub/clianex-commerce-ai/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "createOrReadKeylessAction",
+          "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+        }
+      },
+      "layer": {
+        "app/about/page": "action-browser"
+      },
+      "exportedName": "createOrReadKeylessAction",
+      "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+    },
+    "00a3ed538a8ad3a85f19f509bb87b32106b2d9bca5": {
+      "workers": {
+        "app/about/page": {
+          "moduleId": "[project]/Documents/GitHub/clianex-commerce-ai/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteKeylessAction",
+          "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+        }
+      },
+      "layer": {
+        "app/about/page": "action-browser"
+      },
+      "exportedName": "deleteKeylessAction",
+      "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+    },
+    "00be1ff47c3ac436e2b5bc572ff75c93f3a78a2a6c": {
+      "workers": {
+        "app/about/page": {
+          "moduleId": "[project]/Documents/GitHub/clianex-commerce-ai/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "detectKeylessEnvDriftAction",
+          "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+        }
+      },
+      "layer": {
+        "app/about/page": "action-browser"
+      },
+      "exportedName": "detectKeylessEnvDriftAction",
+      "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+    },
+    "404d61f2ac7bf889092da5aba2a6ae45ed581f6257": {
+      "workers": {
+        "app/about/page": {
+          "moduleId": "[project]/Documents/GitHub/clianex-commerce-ai/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "syncKeylessConfigAction",
+          "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+        }
+      },
+      "layer": {
+        "app/about/page": "action-browser"
+      },
+      "exportedName": "syncKeylessConfigAction",
+      "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js"
+    },
+    "0060be0e6e5cfeec0c1be1d648e30e3da21d518f57": {
+      "workers": {
+        "app/about/page": {
+          "moduleId": "[project]/Documents/GitHub/clianex-commerce-ai/.next-internal/server/app/about/page/actions.js { ACTIONS_MODULE0 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "invalidateCacheAction",
+          "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js"
+        }
+      },
+      "layer": {
+        "app/about/page": "action-browser"
+      },
+      "exportedName": "invalidateCacheAction",
+      "filename": "Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js"
+    }
+  },
+  "edge": {}
+}
