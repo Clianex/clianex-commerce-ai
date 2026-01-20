@@ -5,21 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.36.5",
-<<<<<<< HEAD
-    "next": "^16.1.1-canary.35",
-=======
+    "@clerk/nextjs": "^6.0.0",
     "next": "16.1.1",
->>>>>>> fbc312ff808e9d9bcbe1b6bb3c2a294189aa02d7
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.1",
+    "@tailwindcss/postcss": "^4.0.0",
     "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.1"
+    "autoprefixer": "^10.4.20"
   }
 }
