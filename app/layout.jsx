@@ -1,16 +1,14 @@
 import "./globals.css";
-import NavBar from "../components/NavBar";
 import { ClerkProvider } from "@clerk/nextjs";
+import NavBar from "../components/NavBar";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className="bg-[#0b0f1a] text-gray-100">
-        <ClerkProvider
-          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-        >
+      <body className="bg-gray-50 text-gray-900">
+        <ClerkProvider>
           <NavBar />
-          <main className="max-w-7xl mx-auto px-6 pt-24">
+          <main className="container mx-auto px-4 py-6">
             {children}
           </main>
         </ClerkProvider>

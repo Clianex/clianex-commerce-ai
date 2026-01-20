@@ -1,5 +1,6 @@
 {
   "name": "clianex-commerce-ai",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -7,10 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.36.8",
-    "@tailwindcss/postcss": "^4.1.18",
-    "next": "16.1.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@clerk/nextjs": "^6.36.5",
+    "next": "^16.1.1-canary.35",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.1"
   }
 }

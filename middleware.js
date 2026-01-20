@@ -6,5 +6,9 @@ export default clerkMiddleware({
 });
 
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: [
+    "/((?!_next|favicon.ico|public).*)",
+    "/dashboard/:path*",
+    "/marketplace/:path*"
+  ],
 };

@@ -1,31 +1,12 @@
 export default function Home() {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center gap-8">
-      <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-        Comercio <span className="text-blue-400">Serverless</span>  
-        <br />
-        impulsado por <span className="text-purple-400">IA</span>
+    <div className="text-center mt-16">
+      <h1 className="text-4xl font-bold mb-4">
+        Clianex Commerce AI
       </h1>
-
-      <p className="max-w-2xl text-lg text-gray-300">
-        Clianex Commerce AI te permite lanzar, automatizar y escalar tu tienda
-        con módulos inteligentes, análisis en tiempo real y marketplace integrado.
+      <p className="text-lg text-gray-600">
+        Plataforma serverless de comercio impulsado por IA.
       </p>
-
-      <div className="flex gap-4">
-        <a
-          href="/register"
-          className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-medium"
-        >
-          Empezar gratis
-        </a>
-        <a
-          href="/marketplace"
-          className="border border-white/20 hover:border-white/40 px-6 py-3 rounded-xl font-medium"
-        >
-          Ver Marketplace
-        </a>
-      </div>
-    </section>
+    </div>
   );
 }

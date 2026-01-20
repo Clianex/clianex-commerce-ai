@@ -28,7 +28,9 @@ const __TURBOPACK__default__export__ = (0, __TURBOPACK__imported__module__$5b$pr
 });
 const config = {
     matcher: [
-        "/dashboard/:path*"
+        "/((?!_next|favicon.ico|public).*)",
+        "/dashboard/:path*",
+        "/marketplace/:path*"
     ]
 };
 }),

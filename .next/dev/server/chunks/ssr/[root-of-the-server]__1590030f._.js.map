@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/layout.jsx"],"sourcesContent":["import { ClerkProvider } from \"@clerk/nextjs\";\nimport \"./globals.css\";\n\nexport const metadata = {\n  title: \"Clianex Commerce AI\",\n  description: \"Plataforma serverless de comercio impulsado por IA\",\n};\n\nexport default function RootLayout({ children }) {\n  return (\n    <ClerkProvider>\n      <html lang=\"en\">\n        <body>{children}</body>\n      </html>\n    </ClerkProvider>\n  );\n}\n"],"names":[],"mappings":";;;;;;;AAAA;;;;AAGO,MAAM,WAAW;IACtB,OAAO;IACP,aAAa;AACf;AAEe,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC7C,qBACE,kSAAC,8OAAa;kBACZ,cAAA,kSAAC;YAAK,MAAK;sBACT,cAAA,kSAAC;0BAAM;;;;;;;;;;;;;;;;AAIf"}}]
-}
