@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/blog/page.jsx"],"sourcesContent":["export default function BlogPage() {\n  return (\n    <main style={{ padding: 40 }}>\n      <h1>Blog</h1>\n      <p>Próximamente contenido sobre comercio e IA.</p>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,kSAAC;QAAK,OAAO;YAAE,SAAS;QAAG;;0BACzB,kSAAC;0BAAG;;;;;;0BACJ,kSAAC;0BAAE;;;;;;;;;;;;AAGT"}}]
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/blog/page.jsx"],"sourcesContent":["export default function BlogPage() {\n  return (\n    <main style={{ padding: 40 }}>\n      <h1 className=\"text-4xl font-bold mb-6\">Blog</h1>\n      <p className=\"text-gray-400 text-m\">Próximamente contenido sobre comercio e IA.</p>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,kSAAC;QAAK,OAAO;YAAE,SAAS;QAAG;;0BACzB,kSAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,kSAAC;gBAAE,WAAU;0BAAuB;;;;;;;;;;;;AAG1C"}}]
 }

@@ -1,31 +1,6 @@
 {
   "pages": {
-    "/_app": [
-      "static/chunks/3a01d_next_dist_compiled_24b1afed._.js",
-      "static/chunks/3a01d_next_dist_shared_lib_748cf1dc._.js",
-      "static/chunks/3a01d_next_dist_client_4ba69eab._.js",
-      "static/chunks/3a01d_next_dist_9a8eec0f._.js",
-      "static/chunks/3a01d_next_app_e002d83d.js",
-      "static/chunks/[next]_entry_page-loader_ts_e904961b._.js",
-      "static/chunks/3a01d_react-dom_da2094d6._.js",
-      "static/chunks/3a01d_ae5acfcc._.js",
-      "static/chunks/[root-of-the-server]__a6f5cc9d._.js",
-      "static/chunks/Documents_GitHub_clianex-commerce-ai_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-Documents_GitHub_clianex-commerce-ai_pages__app_79c0a23a._.js"
-    ],
-    "/_error": [
-      "static/chunks/3a01d_next_dist_compiled_24b1afed._.js",
-      "static/chunks/3a01d_next_dist_shared_lib_1668fdb0._.js",
-      "static/chunks/3a01d_next_dist_client_4ba69eab._.js",
-      "static/chunks/3a01d_next_dist_a97849a3._.js",
-      "static/chunks/3a01d_next_error_10ca06cf.js",
-      "static/chunks/[next]_entry_page-loader_ts_798d6eeb._.js",
-      "static/chunks/3a01d_react-dom_da2094d6._.js",
-      "static/chunks/3a01d_ae5acfcc._.js",
-      "static/chunks/[root-of-the-server]__de968bf3._.js",
-      "static/chunks/Documents_GitHub_clianex-commerce-ai_pages__error_2da965e7._.js",
-      "static/chunks/turbopack-Documents_GitHub_clianex-commerce-ai_pages__error_4459c848._.js"
-    ]
+    "/_app": []
   },
   "devFiles": [],
   "polyfillFiles": [
