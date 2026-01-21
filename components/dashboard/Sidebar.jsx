@@ -1,22 +1,18 @@
-import Link from "next/link";
-
 export default function Sidebar() {
   return (
-    <aside className="w-64 bg-white border-r hidden md:block">
-      <div className="p-6 font-bold text-xl">
-        Clianex AI
-      </div>
+    <aside className="w-64 min-h-screen bg-slate-900 text-white p-6">
+      <h2 className="text-xl font-bold mb-6">Clianex</h2>
 
-      <nav className="px-4 space-y-2">
-        <Link href="/dashboard" className="block px-4 py-2 rounded hover:bg-gray-100">
+      <nav className="space-y-3">
+        <a href="/dashboard" className="block hover:text-indigo-400">
           Dashboard
-        </Link>
-        <Link href="/marketplace" className="block px-4 py-2 rounded hover:bg-gray-100">
+        </a>
+        <a href="/dashboard/modules" className="block hover:text-indigo-400">
+          Modules
+        </a>
+        <a href="/marketplace" className="block hover:text-indigo-400">
           Marketplace
-        </Link>
-        <Link href="/blog" className="block px-4 py-2 rounded hover:bg-gray-100">
-          Blog
-        </Link>
+        </a>
       </nav>
     </aside>
   );
