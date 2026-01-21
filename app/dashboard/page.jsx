@@ -1,12 +1,14 @@
+import { auth } from "@clerk/nextjs/server";
 
 export default function Dashboard() {
+  auth();
+
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold text-white">Dashboard</h1>
-      <p>Panel principal.</p>
-      <div className="bg-slate-900 p-4 rounded-xl border border-slate-800">
-        Métricas y módulos aparecerán aquí.
-      </div>
+    <div>
+      <h1 className="text-3xl font-bold">Dashboard</h1>
+      <p className="mt-4 text-gray-600">
+        Área privada del usuario
+      </p>
     </div>
   );
 }

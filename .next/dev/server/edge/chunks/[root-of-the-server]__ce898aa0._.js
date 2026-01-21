@@ -25,8 +25,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clian
 const __TURBOPACK__default__export__ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$server$2f$clerkMiddleware$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["clerkMiddleware"])();
 const config = {
     matcher: [
-        "/dashboard/:path*",
-        "/((?!_next|static|favicon.ico).*)"
+        "/((?!_next|.*\\..*).*)"
     ]
 };
 }),
