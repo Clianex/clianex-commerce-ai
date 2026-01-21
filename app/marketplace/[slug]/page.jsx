@@ -1,5 +1,3 @@
-import StickyAddToCart from "@/components/StickyAddToCart";
-
 export default function ProductPage({ params }) {
   const { slug } = params;
 
@@ -20,8 +18,6 @@ export default function ProductPage({ params }) {
           <li>Escalable y serverless</li>
         </ul>
       </div>
-
-      <StickyAddToCart />
     </div>
   );
 }

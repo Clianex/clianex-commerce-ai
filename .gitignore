@@ -3,3 +3,6 @@ node_modules
 =======
 node_modules
 >>>>>>> 432deeaeceac5725aa559d8e897deefaba88bfbf
+
+# clerk configuration (can include secrets)
+/.clerk/

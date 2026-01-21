@@ -11755,7 +11755,7 @@ const CLERK_JS_URL = process.env.NEXT_PUBLIC_CLERK_JS_URL || "";
 const API_VERSION = process.env.CLERK_API_VERSION || "v1";
 const SECRET_KEY = process.env.CLERK_SECRET_KEY || "";
 const MACHINE_SECRET_KEY = process.env.CLERK_MACHINE_SECRET_KEY || "";
-const PUBLISHABLE_KEY = ("TURBOPACK compile-time value", "pk_test_d2hvbGUta2luZ2Zpc2gtMjQuY2xlcmsuYWNjb3VudHMuZGV2JA") || "";
+const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || "";
 const ENCRYPTION_KEY = process.env.CLERK_ENCRYPTION_KEY || "";
 const API_URL = process.env.CLERK_API_URL || (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$runtime$2f$apiUrlFromPublishableKey$2d$B2KkwQp6$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["apiUrlFromPublishableKey"])(PUBLISHABLE_KEY);
 const DOMAIN = process.env.NEXT_PUBLIC_CLERK_DOMAIN || "";
@@ -17140,7 +17140,7 @@ const mergeNextClerkPropsWithEnv = (props)=>{
     var _a;
     return {
         ...props,
-        publishableKey: props.publishableKey || ("TURBOPACK compile-time value", "pk_test_d2hvbGUta2luZ2Zpc2gtMjQuY2xlcmsuYWNjb3VudHMuZGV2JA") || "",
+        publishableKey: props.publishableKey || process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || "",
         clerkJSUrl: props.clerkJSUrl || process.env.NEXT_PUBLIC_CLERK_JS_URL,
         clerkJSVersion: props.clerkJSVersion || process.env.NEXT_PUBLIC_CLERK_JS_VERSION,
         proxyUrl: props.proxyUrl || process.env.NEXT_PUBLIC_CLERK_PROXY_URL || "",
@@ -17856,7 +17856,7 @@ function ensureServerEntryExports(actions) {
 "[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/server/keyless-custom-headers.js [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/* __next_internal_action_entry_do_not_use__ [{"00121b107e6ce0567365273b5f5b4f144624f450a5":"collectKeylessMetadata","40512f5c4673f786808f2c07853b3cc8a184a4fd22":"formatMetadataHeaders"},"",""] */ __turbopack_context__.s([
+/* __next_internal_action_entry_do_not_use__ [{"007137ad0cb72b020dc7a40b36a7dd08f238706cb2":"collectKeylessMetadata","40f48cb56251356f5ac218062c9b628bb684f05b37":"formatMetadataHeaders"},"",""] */ __turbopack_context__.s([
     "collectKeylessMetadata",
     ()=>collectKeylessMetadata,
     "formatMetadataHeaders",
@@ -17982,8 +17982,8 @@ async function formatMetadataHeaders(metadata) {
     collectKeylessMetadata,
     formatMetadataHeaders
 ]);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(collectKeylessMetadata, "00121b107e6ce0567365273b5f5b4f144624f450a5", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(formatMetadataHeaders, "40512f5c4673f786808f2c07853b3cc8a184a4fd22", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(collectKeylessMetadata, "007137ad0cb72b020dc7a40b36a7dd08f238706cb2", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(formatMetadataHeaders, "40f48cb56251356f5ac218062c9b628bb684f05b37", null);
  //# sourceMappingURL=keyless-custom-headers.js.map
 }),
 "[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/utils/only-try.js [app-rsc] (ecmascript)", ((__turbopack_context__) => {
@@ -18672,7 +18672,7 @@ async function getKeylessCookieValue(getter) {
 "[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/* __next_internal_action_entry_do_not_use__ [{"00a0e71a5fec5ddc4a31ccd8b2d92a1a56f7d70cf0":"createOrReadKeylessAction","00a3ed538a8ad3a85f19f509bb87b32106b2d9bca5":"deleteKeylessAction","00be1ff47c3ac436e2b5bc572ff75c93f3a78a2a6c":"detectKeylessEnvDriftAction","404d61f2ac7bf889092da5aba2a6ae45ed581f6257":"syncKeylessConfigAction"},"",""] */ __turbopack_context__.s([
+/* __next_internal_action_entry_do_not_use__ [{"0038603c1e70fc9867f4e0a8a42b61549961204df6":"deleteKeylessAction","00564e72e70741f45fc2bb1d048a0f1b4098e2acd7":"createOrReadKeylessAction","00e4c41be557b963a09bc1af0305c53c46fbe44661":"detectKeylessEnvDriftAction","40bf030e276f85ca5097727bc3eabc5ea709c86c45":"syncKeylessConfigAction"},"",""] */ __turbopack_context__.s([
     "createOrReadKeylessAction",
     ()=>createOrReadKeylessAction,
     "deleteKeylessAction",
@@ -18779,10 +18779,10 @@ async function detectKeylessEnvDriftAction() {
     deleteKeylessAction,
     detectKeylessEnvDriftAction
 ]);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(syncKeylessConfigAction, "404d61f2ac7bf889092da5aba2a6ae45ed581f6257", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createOrReadKeylessAction, "00a0e71a5fec5ddc4a31ccd8b2d92a1a56f7d70cf0", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteKeylessAction, "00a3ed538a8ad3a85f19f509bb87b32106b2d9bca5", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(detectKeylessEnvDriftAction, "00be1ff47c3ac436e2b5bc572ff75c93f3a78a2a6c", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(syncKeylessConfigAction, "40bf030e276f85ca5097727bc3eabc5ea709c86c45", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createOrReadKeylessAction, "00564e72e70741f45fc2bb1d048a0f1b4098e2acd7", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteKeylessAction, "0038603c1e70fc9867f4e0a8a42b61549961204df6", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(detectKeylessEnvDriftAction, "00e4c41be557b963a09bc1af0305c53c46fbe44661", null);
 }),
 "[project]/Documents/GitHub/clianex-commerce-ai/node_modules/@clerk/nextjs/dist/esm/app-router/server/keyless-provider.js [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
