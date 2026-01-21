@@ -1,0 +1,3 @@
+module.exports=[62499,a=>{a.n(a.i(14824))},87162,a=>{a.n(a.i(59120))},24484,a=>{a.n(a.i(80153))},43594,a=>{a.n(a.i(40120))},32195,a=>{a.n(a.i(93718))},15674,a=>{"use strict";var b=a.i(61162);function c(){return(0,b.jsxs)("main",{style:{padding:40},children:[(0,b.jsx)("h1",{children:"Blog"}),(0,b.jsx)("p",{children:"Próximamente contenido sobre comercio e IA."})]})}a.s(["default",()=>c])}];
+
+//# sourceMappingURL=Documents_GitHub_clianex-commerce-ai_1e83f898._.js.map

@@ -1,0 +1,3 @@
+module.exports=[62499,a=>{a.n(a.i(14824))},87162,a=>{a.n(a.i(59120))},24484,a=>{a.n(a.i(80153))},43594,a=>{a.n(a.i(40120))},32195,a=>{a.n(a.i(93718))},41221,a=>{a.n(a.i(97404))},94718,a=>{"use strict";var b=a.i(61162);function c(){return(0,b.jsxs)("div",{children:[(0,b.jsx)("h1",{className:"text-3xl font-bold mb-6",children:"Ajustes"}),(0,b.jsx)("p",{className:"text-white/60",children:"Preferencias de cuenta y configuración."})]})}a.s(["default",()=>c])}];
+
+//# sourceMappingURL=Documents_GitHub_clianex-commerce-ai_c328c382._.js.map

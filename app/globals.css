@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base visual */
+html,
 
 body {
   margin: 0;

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/sign-in/page.jsx"],"sourcesContent":["import { SignIn } from \"@clerk/nextjs\";\n\nexport default function Page() {\n  return <SignIn />;\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBAAO,kSAAC,oPAAM;;;;;AAChB"}}]
+}
