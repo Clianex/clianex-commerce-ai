@@ -1,7 +1,13 @@
+import { UserButton } from "@clerk/nextjs";
+
 export default function TopBar() {
   return (
-    <header className="w-full h-16 bg-white border-b flex items-center px-6">
-      <h1 className="text-lg font-semibold">Dashboard</h1>
+    <header className="h-16 bg-white border-b px-6 flex items-center justify-between">
+      <span className="text-sm text-slate-600">
+        Dashboard
+      </span>
+
+      <UserButton afterSignOutUrl="/" />
     </header>
   );
 }

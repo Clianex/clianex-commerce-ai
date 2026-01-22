@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/%28app%29/blog/page.jsx"],"sourcesContent":["export default function BlogPage() {\n  return (\n    <div className=\"pt-6\">\n      <h1 className=\"text-4xl font-bold mb-6\">Blog</h1>\n      <p className=\"text-gray-400 text-m\">Próximamente contenido sobre comercio e IA.</p>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,kSAAC;QAAI,WAAU;;0BACb,kSAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,kSAAC;gBAAE,WAAU;0BAAuB;;;;;;;;;;;;AAG1C"}}]
+}

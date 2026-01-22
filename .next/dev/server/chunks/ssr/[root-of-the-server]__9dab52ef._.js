@@ -156,7 +156,7 @@ async function detectKeylessEnvDrift() {
         if (!keylessFile) {
             return;
         }
-        const envPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+        const envPublishableKey = ("TURBOPACK compile-time value", "pk_test_d2hvbGUta2luZ2Zpc2gtMjQuY2xlcmsuYWNjb3VudHMuZGV2JA");
         const envSecretKey = process.env.CLERK_SECRET_KEY;
         const hasEnvVars = Boolean(envPublishableKey || envSecretKey);
         const keylessFileHasKeys = Boolean((keylessFile == null ? void 0 : keylessFile.publishableKey) && (keylessFile == null ? void 0 : keylessFile.secretKey));
@@ -164,9 +164,8 @@ async function detectKeylessEnvDrift() {
         if (!hasEnvVars && !keylessFileHasKeys) {
             return;
         }
-        if (envVarsMissing && keylessFileHasKeys) {
-            return;
-        }
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
         if (!keylessFileHasKeys) {
             return;
         }

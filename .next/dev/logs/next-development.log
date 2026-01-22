@@ -1,35 +1,4 @@
-[00:00:01.866] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:02.752] Server  LOG     ✓ Ready in 2.3s
-[00:00:22.878] Server  LOG     
-
-[Clerk]: You are running in keyless mode.
-You can claim your keys by visiting https://dashboard.clerk.com/apps/claim?token=9a8ab2nreigigq33pj57a6frspwk1sctin7xnht0&return_url=http%3A%2F%2Flocalhost%3A3000%2F
-
-[00:00:23.874] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:24.129] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:04:22.385] Server  LOG     ✓ Compiled in 1095ms
-[00:12:50.379] Browser ERROR   ./Documents/GitHub/clianex-commerce-ai/app/blog/page.jsx:7:3
-Parsing ecmascript source code failed
-  5 |       <p className="text-gray-400 text-m">Próximamente contenido sobre comercio e IA.</p>
-  6 |     </div>
-> 7 |   );
-    |   ^
-  8 | }
-  9 |
-
-Expression expected
-[00:13:53.257] Server  LOG     ✓ Compiled in 31ms
-[00:13:53.328] Server  LOG     
-
-[Clerk]: You are running in keyless mode.
-You can claim your keys by visiting https://dashboard.clerk.com/apps/claim?token=9a8ab2nreigigq33pj57a6frspwk1sctin7xnht0&return_url=http%3A%2F%2Flocalhost%3A3000%2F
-
-[00:14:21.844] Server  LOG     ✓ Compiled in 26ms
-[00:14:27.855] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:14:28.217] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:15:49.526] Server  LOG     ✓ Compiled in 26ms
-[00:16:36.636] Server  LOG     ✓ Compiled in 27ms
-[00:16:50.090] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:50.453] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
-[00:17:32.660] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:33.075] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:02.676] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:03.036] Server  LOG     ✓ Ready in 2.4s
+[00:00:12.412] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:13.131] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview

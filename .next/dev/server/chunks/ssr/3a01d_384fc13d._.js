@@ -11755,7 +11755,7 @@ const CLERK_JS_URL = process.env.NEXT_PUBLIC_CLERK_JS_URL || "";
 const API_VERSION = process.env.CLERK_API_VERSION || "v1";
 const SECRET_KEY = process.env.CLERK_SECRET_KEY || "";
 const MACHINE_SECRET_KEY = process.env.CLERK_MACHINE_SECRET_KEY || "";
-const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || "";
+const PUBLISHABLE_KEY = ("TURBOPACK compile-time value", "pk_test_d2hvbGUta2luZ2Zpc2gtMjQuY2xlcmsuYWNjb3VudHMuZGV2JA") || "";
 const ENCRYPTION_KEY = process.env.CLERK_ENCRYPTION_KEY || "";
 const API_URL = process.env.CLERK_API_URL || (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$GitHub$2f$clianex$2d$commerce$2d$ai$2f$node_modules$2f40$clerk$2f$shared$2f$dist$2f$runtime$2f$apiUrlFromPublishableKey$2d$B2KkwQp6$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["apiUrlFromPublishableKey"])(PUBLISHABLE_KEY);
 const DOMAIN = process.env.NEXT_PUBLIC_CLERK_DOMAIN || "";
@@ -17140,7 +17140,7 @@ const mergeNextClerkPropsWithEnv = (props)=>{
     var _a;
     return {
         ...props,
-        publishableKey: props.publishableKey || process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || "",
+        publishableKey: props.publishableKey || ("TURBOPACK compile-time value", "pk_test_d2hvbGUta2luZ2Zpc2gtMjQuY2xlcmsuYWNjb3VudHMuZGV2JA") || "",
         clerkJSUrl: props.clerkJSUrl || process.env.NEXT_PUBLIC_CLERK_JS_URL,
         clerkJSVersion: props.clerkJSVersion || process.env.NEXT_PUBLIC_CLERK_JS_VERSION,
         proxyUrl: props.proxyUrl || process.env.NEXT_PUBLIC_CLERK_PROXY_URL || "",
