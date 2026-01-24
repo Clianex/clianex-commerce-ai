@@ -1,0 +1,10 @@
+var R=require("../../../chunks/[turbopack]_runtime.js")("server/app/api/modules/route.js")
+R.c("server/chunks/3a01d_74cf90bf._.js")
+R.c("server/chunks/3a01d_next_ceabb0ad._.js")
+R.c("server/chunks/3a01d_@clerk_backend_dist_62d7bc18._.js")
+R.c("server/chunks/3a01d_@clerk_nextjs_dist_esm_c2a34695._.js")
+R.c("server/chunks/[root-of-the-server]__4e870761._.js")
+R.c("server/chunks/[root-of-the-server]__117e2605._.js")
+R.c("server/chunks/70124__next-internal_server_app_api_modules_route_actions_d0c8176f.js")
+R.m("[project]/Documents/GitHub/clianex-commerce-ai/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Documents/GitHub/clianex-commerce-ai/app/api/modules/route.js [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/Documents/GitHub/clianex-commerce-ai/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/Documents/GitHub/clianex-commerce-ai/app/api/modules/route.js [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

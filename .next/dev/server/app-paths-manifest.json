@@ -1,6 +1,10 @@
 {
   "/(app)/blog/page": "app/(app)/blog/page.js",
   "/(app)/dashboard/page": "app/(app)/dashboard/page.js",
+  "/(app)/dashboard/settings/page": "app/(app)/dashboard/settings/page.js",
   "/(app)/marketplace/page": "app/(app)/marketplace/page.js",
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/modules/route": "app/api/modules/route.js",
+  "/page": "app/page.js",
+  "/sign-up/page": "app/sign-up/page.js"
 }

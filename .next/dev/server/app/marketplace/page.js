@@ -1,6 +1,6 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/marketplace/page.js")
 R.c("server/chunks/ssr/3a01d_next_dist_f3a2e69b._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__afa9a8ee._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__e7e212c0._.js")
 R.c("server/chunks/ssr/3a01d_next_dist_5bac92eb._.js")
 R.c("server/chunks/ssr/[externals]__7f148858._.js")
 R.c("server/chunks/ssr/3a01d_next_dist_client_components_builtin_global-error_8552f0ae.js")

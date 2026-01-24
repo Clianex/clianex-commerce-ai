@@ -1,4 +1,157 @@
-[00:00:02.676] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:03.036] Server  LOG     ✓ Ready in 2.4s
-[00:00:12.412] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:13.131] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:01.234] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.445] Server  LOG     ✓ Ready in 1030ms
+[00:00:02.400] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:02.519] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:07.479] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.626] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:11.314] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:00:11.741] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:00:14.461] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:00:14.518] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:00:16.213] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:00:16.276] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:01:11.869] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:01:11.936] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:01:16.101] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:01:16.160] Server  ERROR   ⨯ Error: Failed to load external module @prisma/client-f6ac743632e5f0ec: Error: Cannot find module '.prisma/client/default'
+Require stack:
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\@prisma\client\default.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[root-of-the-server]__4e870761._.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\chunks\[turbopack]_runtime.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\.next\dev\server\app\api\modules\route.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\require.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\load-components.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\utils.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\options.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\build\swc\index.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\hotel\Documents\GitHub\clianex-commerce-ai\node_modules\next\dist\server\lib\start-server.js
+[00:01:22.762] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:22.949] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:29.035] Browser ERROR   unhandledRejection: Error: 
+Clerk: The <SignUp/> component is not configured correctly. The most likely reasons for this error are:
+
+1. The "/sign-up" route is not a catch-all route.
+It is recommended to convert this route to a catch-all route, eg: "/sign-up/[[...rest]]/page.tsx". Alternatively, you can update the <SignUp/> component to use hash-based routing by setting the "routing" prop to "hash".
+
+2. The <SignUp/> component is mounted in a catch-all route, but all routes under "/sign-up" are protected by the middleware.
+To resolve this, ensure that the middleware does not protect the catch-all route or any of its children. If you are using the "createRouteMatcher" helper, consider adding "(.*)" to the end of the route pattern, eg: "/sign-up(.*)". For more information, see: https://clerk.com/docs/reference/nextjs/clerk-middleware#create-route-matcher
+
