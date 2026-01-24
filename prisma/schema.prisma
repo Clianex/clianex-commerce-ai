@@ -8,3 +8,7 @@ model UserModule {
   @@unique([userId, moduleId])
 }
 
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // o directamente la URL de conexión
+}
