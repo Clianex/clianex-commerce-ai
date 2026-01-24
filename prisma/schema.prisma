@@ -7,8 +7,4 @@ model UserModule {
 
   @@unique([userId, moduleId])
 }
-datasource db {
-  provider = "postgresql"      // Puede ser "mysql", "sqlite", etc.
-  url      = env("DATABASE_URL")  // Se obtiene desde la variable de entorno
-}
 
