@@ -1,21 +1,13 @@
-// Prisma schema for UserModule model
+model UserModule {
+  id        String   @id @default(cuid())
+  userId    String
+  moduleId  String
+  active    Boolean  @default(false)
+  createdAt DateTime @default(now())
 
-generator client {
-  provider = "prisma-client-js"
+  @@unique([userId, moduleId])
 }
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")  // Esto usa la variable de entorno DATABASE_URL
-}
-
-model UserModule {
-  id        String   @id @default(cuid())  // El ID será único y generado con `cuid()`
-  userId    String
-  moduleId  String
-  active    Boolean  @default(false)  // Valor por defecto `false`
-  createdAt DateTime @default(now())  // Fecha de creación por defecto es la fecha actual
-
-  // Restricción única entre userId y moduleId
-  @@unique([userId, moduleId])
 }
