@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/about/page.jsx"],"sourcesContent":["export default function AboutPage() {\n  return (\n    <div className=\"pt-6\">\n      <h1 className=\"text-4xl font-bold mb-6\">About Clianex</h1>\n      <p className=\"text-gray-400 text-m\">Clianex Commerce AI es una plataforma serverless impulsada por IA.</p>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,kSAAC;QAAI,WAAU;;0BACb,kSAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,kSAAC;gBAAE,WAAU;0BAAuB;;;;;;;;;;;;AAG1C"}}]
-}

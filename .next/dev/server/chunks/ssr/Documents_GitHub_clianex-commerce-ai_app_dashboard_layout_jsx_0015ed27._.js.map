@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/dashboard/layout.jsx"],"sourcesContent":["import { ClerkProvider, SignedIn, SignedOut, RedirectToSignIn } from \"@clerk/nextjs\";\r\nimport Sidebar from \"@/components/dashboard/Sidebar\";\r\nimport TopBar from \"@/components/dashboard/TopBar\";\r\n\r\nexport default function DashboardLayout({ children }) {\r\n  return (\r\n    <ClerkProvider>\r\n      <SignedIn>\r\n        <div className=\"flex min-h-screen bg-gray-50\">\r\n          <Sidebar />\r\n          <div className=\"flex flex-col flex-1\">\r\n            <TopBar />\r\n            <main className=\"p-6\">{children}</main>\r\n          </div>\r\n        </div>\r\n      </SignedIn>\r\n\r\n      <SignedOut>\r\n        <RedirectToSignIn />\r\n      </SignedOut>\r\n    </ClerkProvider>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;AAAA;;;;;;;;;;;;;;;AAIe,SAAS,gBAAgB,EAAE,QAAQ,EAAE;IAClD,qBACE,kSAAC,8OAAa;;0BACZ,kSAAC,yOAAQ;0BACP,cAAA,kSAAC;oBAAI,WAAU;;sCACb,kSAAC;;;;;sCACD,kSAAC;4BAAI,WAAU;;8CACb,kSAAC;;;;;8CACD,kSAAC;oCAAK,WAAU;8CAAO;;;;;;;;;;;;;;;;;;;;;;;0BAK7B,kSAAC,0OAAS;0BACR,cAAA,kSAAC,mQAAgB;;;;;;;;;;;;;;;;AAIzB"}}]
-}

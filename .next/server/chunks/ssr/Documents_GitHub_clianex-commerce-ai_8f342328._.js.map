@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../../../../Documents/GitHub/clianex-commerce-ai/app/sign-in/page.jsx"],"sourcesContent":["import { SignIn } from \"@clerk/nextjs\";\n\nexport default function Page() {\n  return <SignIn />;\n}\n"],"names":[],"mappings":"+LAAA,EAAA,EAAA,CAAA,CAAA,OAEe,SAAS,IACtB,MAAO,CAAA,EAAA,EAAA,GAAA,EAAC,EAAA,MAAM,CAAA,CAAA,EAChB"}

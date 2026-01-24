@@ -1,3 +1,0 @@
-module.exports=[62499,a=>{a.n(a.i(14824))},87162,a=>{a.n(a.i(59120))},24484,a=>{a.n(a.i(80153))},43594,a=>{a.n(a.i(40120))},32195,a=>{a.n(a.i(93718))},71081,a=>{"use strict";var b=a.i(61162),c=a.i(57964);function d(){return(0,b.jsx)("div",{className:"flex min-h-screen items-center justify-center bg-gray-50",children:(0,b.jsxs)("div",{className:"bg-white p-8 rounded-xl shadow",children:[(0,b.jsx)("h1",{className:"text-2xl font-bold text-center mb-6",children:"Crear cuenta en Clianex"}),(0,b.jsx)(c.SignUp,{path:"/register",routing:"path",signInUrl:"/sign-in"})]})})}a.s(["default",()=>d])}];
-
-//# sourceMappingURL=Documents_GitHub_clianex-commerce-ai_ad42a373._.js.map

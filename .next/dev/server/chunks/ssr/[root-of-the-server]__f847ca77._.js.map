@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/marketplace/page.jsx"],"sourcesContent":["import ModuleGrid from \"@/components/marketplace/ModuleGrid\";\n\nexport default function MarketplacePage() {\n  return (\n    <main className=\"min-h-screen bg-slate-50\">\n      <section className=\"max-w-7xl mx-auto px-6 py-16\">\n        <h1 className=\"text-4xl font-bold text-slate-900\">\n          Marketplace de Módulos\n        </h1>\n\n        <p className=\"mt-4 text-slate-600 max-w-2xl\">\n          Activa capacidades de inteligencia artificial según las necesidades de\n          tu negocio. Sin código. Sin fricción.\n        </p>\n\n        <ModuleGrid />\n      </section>\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;AAEe,SAAS;IACtB,qBACE,kSAAC;QAAK,WAAU;kBACd,cAAA,kSAAC;YAAQ,WAAU;;8BACjB,kSAAC;oBAAG,WAAU;8BAAoC;;;;;;8BAIlD,kSAAC;oBAAE,WAAU;8BAAgC;;;;;;8BAK7C,kSAAC;;;;;;;;;;;;;;;;AAIT"}}]
-}
