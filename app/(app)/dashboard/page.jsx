@@ -1,5 +1,6 @@
 import { auth } from "@clerk/nextjs/server";
 import { getActiveModules } from "@/lib/modules";
+export const dynamic = "force-dynamic";
 
 export default async function DashboardPage() {
   const { userId } = auth();

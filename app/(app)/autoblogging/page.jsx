@@ -1,7 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { hasModuleAccess } from "@/lib/permissions";
-
+export const dynamic = "force-dynamic";
 export default async function AutobloggingPage() {
   const { userId } = auth();
 
