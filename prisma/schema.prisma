@@ -14,9 +14,11 @@ datasource db {
 */
 model User {
   id        String       @id @default(cuid())
-  clerkId  String       @unique
-  email    String?
-  createdAt DateTime    @default(now())
+  clerkId   String       @unique
+  email     String?
+  name      String?      // Nombre completo del usuario
+  image     String?      // URL del avatar
+  createdAt DateTime     @default(now())
 
   modules   UserModule[]
 }
@@ -43,12 +45,12 @@ model Module {
 */
 model UserModule {
   id        String   @id @default(cuid())
-  userId   String
-  moduleId String
-  active   Boolean  @default(true)
+  userId    String
+  moduleId  String
+  active    Boolean  @default(true)
 
-  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  module   Module   @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  module    Module   @relation(fields: [moduleId], references: [id], onDelete: Cascade)
 
   @@unique([userId, moduleId])
 }
