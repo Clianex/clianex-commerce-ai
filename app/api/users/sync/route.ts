@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 export async function POST() {
-  const { userId } = await auth(); // ✅ await
+  const { userId } = await auth(); // 🔴 obligatorio en v6
 
   if (!userId) {
     return new NextResponse("Unauthorized", { status: 401 });
@@ -14,7 +14,7 @@ export async function POST() {
     return new NextResponse("User not found", { status: 404 });
   }
 
-  const email = user.emailAddresses[0]?.emailAddress;
+  const email = user.primaryEmailAddress?.emailAddress;
 
   const dbUser = await prisma.user.upsert({
     where: { clerkId: user.id },
