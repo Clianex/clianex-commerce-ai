@@ -1,0 +1,23 @@
+{
+  "/(app)/autoblogging/page": "/autoblogging",
+  "/(app)/blog/page": "/blog",
+  "/(app)/dashboard/billing/page": "/dashboard/billing",
+  "/(app)/dashboard/page": "/dashboard",
+  "/(app)/dashboard/settings/page": "/dashboard/settings",
+  "/(app)/marketplace/page": "/marketplace",
+  "/(app)/page": "/",
+  "/(auth)/sign-in/[[...rest]]/page": "/sign-in/[[...rest]]",
+  "/(auth)/sign-up/[[...rest]]/page": "/sign-up/[[...rest]]",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/dashboard/modules/route": "/api/dashboard/modules",
+  "/api/modules/route": "/api/modules",
+  "/api/modules/toggle/route": "/api/modules/toggle",
+  "/api/users/sync/route": "/api/users/sync",
+  "/login/page": "/login",
+  "/page": "/",
+  "/product/page": "/product",
+  "/sign-in/[[...rest]]/page": "/sign-in/[[...rest]]",
+  "/sign-up/[[...rest]]/page": "/sign-up/[[...rest]]"
+}
