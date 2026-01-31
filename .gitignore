@@ -1,8 +1,18 @@
-<<<<<<< HEAD
-node_modules
-=======
-node_modules
->>>>>>> 432deeaeceac5725aa559d8e897deefaba88bfbf
+# Dependencies
+node_modules/
 
-# clerk configuration (can include secrets)
-/.clerk/
+# Next.js
+.next/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+# Logs
+*.log
+
+# Clerk
+.clerk/
