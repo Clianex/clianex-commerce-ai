@@ -1,55 +1,21 @@
-export default function ModuleCard({ module, onToggle }) {
+export default function ModuleCard({ module, isActive }) {
   return (
-    <div
-      className={`relative rounded-2xl border bg-white p-6 shadow-sm transition
-        ${module.active ? "border-green-500" : "border-slate-200"}
-      `}
-    >
-      {/* Badge */}
-      <span
-        className={`absolute top-4 right-4 rounded-full px-3 py-1 text-xs font-semibold
-          ${
-            module.active
-              ? "bg-green-100 text-green-700"
-              : "bg-slate-100 text-slate-600"
-          }
-        `}
-      >
-        {module.active ? "Activo" : "Inactivo"}
-      </span>
+    <div className="rounded-xl border p-5">
+      <h3 className="font-semibold">{module.name}</h3>
+      <p className="text-sm text-muted-foreground">{module.description}</p>
 
-      {module.featured && (
-        <span className="absolute -top-3 left-4 rounded-full bg-indigo-600 px-3 py-1 text-xs font-semibold text-white">
-          Recomendado
+      {isActive ? (
+        <span className="mt-4 inline-block rounded bg-green-100 px-3 py-1 text-sm">
+          Activo
         </span>
-      )}
-
-      <h3 className="text-xl font-semibold text-slate-900">
-        {module.name}
-      </h3>
-
-      <p className="mt-2 text-sm text-slate-600">
-        {module.description}
-      </p>
-
-      <div className="mt-6 flex items-center justify-between">
-        <span className="text-sm font-semibold text-indigo-600">
-          {module.price}
-        </span>
-
-        <button
-          onClick={onToggle}
-          className={`rounded-lg px-4 py-2 text-sm font-semibold transition
-            ${
-              module.active
-                ? "bg-slate-200 text-slate-700 hover:bg-slate-300"
-                : "bg-indigo-600 text-white hover:bg-indigo-700"
-            }
-          `}
+      ) : (
+        <a
+          href="/checkout"
+          className="mt-4 inline-block rounded bg-black px-4 py-2 text-sm text-white"
         >
-          {module.active ? "Desactivar" : "Activar"}
-        </button>
-      </div>
+          Activar
+        </a>
+      )}
     </div>
   );
 }

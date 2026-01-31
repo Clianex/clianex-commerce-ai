@@ -1,17 +1,29 @@
 import { auth } from "@clerk/nextjs/server";
-import { prisma } from "../../../lib/prisma";
 import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function GET() {
   const { userId } = auth();
-
   if (!userId) {
-    return NextResponse.json([], { status: 401 });
+    return NextResponse.json([], { status: 200 });
   }
 
-  const modules = await prisma.userModule.findMany({
-    where: { userId },
+  const user = await prisma.user.findUnique({
+    where: { clerkId: userId },
+    include: {
+      modules: true,
+    },
   });
 
-  return NextResponse.json(modules);
+  const modules = await prisma.module.findMany();
+
+  const enriched = modules.map((m) => {
+    const relation = user?.modules.find((um) => um.moduleId === m.id);
+    return {
+      ...m,
+      active: relation?.active ?? false,
+    };
+  });
+
+  return NextResponse.json(enriched);
 }

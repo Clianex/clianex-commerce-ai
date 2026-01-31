@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/%28app%29/dashboard/layout.jsx"],"sourcesContent":["import { auth } from \"@clerk/nextjs/server\";\r\nimport { redirect } from \"next/navigation\";\r\n\r\nexport default function DashboardLayout({ children }) {\r\n  const { userId } = auth();\r\n\r\n  if (!userId) {\r\n    redirect(\"/sign-in\");\r\n  }\r\n\r\n  return (\r\n    <div className=\"min-h-screen flex bg-zinc-950 text-white\">\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;AACA;AAAA;;;;AAEe,SAAS,gBAAgB,EAAE,QAAQ,EAAE;IAClD,MAAM,EAAE,MAAM,EAAE,GAAG,IAAA,2LAAI;IAEvB,IAAI,CAAC,QAAQ;QACX,IAAA,iMAAQ,EAAC;IACX;IAEA,qBACE,8OAAC;QAAI,WAAU;kBACZ;;;;;;AAGP"}}]
+}

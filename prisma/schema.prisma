@@ -1,16 +1,54 @@
-model UserModule {
-  id        String   @id @default(cuid())
-  userId    String
-  moduleId  String
-  active    Boolean  @default(false)
-  createdAt DateTime @default(now())
-
-  @@unique([userId, moduleId])
-}
-datasource db {
-  provider = "postgresql"
-}
-
 generator client {
   provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/*
+  =========================
+  USER (Clerk compatible)
+  =========================
+*/
+model User {
+  id        String       @id @default(cuid())
+  clerkId  String       @unique
+  email    String?
+  createdAt DateTime    @default(now())
+
+  modules   UserModule[]
+}
+
+/*
+  =========================
+  MODULE CATALOG
+  =========================
+*/
+model Module {
+  id          String       @id @default(cuid())
+  key         String       @unique
+  name        String
+  description String
+  type        String       // "free" | "pro"
+
+  users       UserModule[]
+}
+
+/*
+  =========================
+  USER <-> MODULE RELATION
+  =========================
+*/
+model UserModule {
+  id        String   @id @default(cuid())
+  userId   String
+  moduleId String
+  active   Boolean  @default(true)
+
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  module   Module   @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, moduleId])
 }

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/hotel/Documents/GitHub/clianex-commerce-ai/app/layout.jsx"],"sourcesContent":["import \"./globals.css\";\nimport { ClerkProvider } from \"@clerk/nextjs\";\n\nexport const metadata = {\n  title: \"Clianex\",\n  description: \"AI Commerce & Automation Platform\",\n};\n\n"],"names":[],"mappings":";;;;;;AAGO,MAAM,WAAW;IACtB,OAAO;IACP,aAAa;AACf"}}]
+}

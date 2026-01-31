@@ -1,38 +1,48 @@
 import { auth } from "@clerk/nextjs/server";
-import { prisma } from "../../../../lib/prisma";
 import { NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(req) {
   const { userId } = auth();
-  const { moduleId } = await req.json();
-
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  const { moduleId } = await req.json();
+
+  // 1️⃣ asegurar usuario en DB
+  const user = await prisma.user.upsert({
+    where: { clerkId: userId },
+    update: {},
+    create: { clerkId: userId },
+  });
+
+  // 2️⃣ toggle módulo
   const existing = await prisma.userModule.findUnique({
     where: {
       userId_moduleId: {
-        userId,
+        userId: user.id,
         moduleId,
       },
     },
   });
 
+  let result;
+
   if (existing) {
-    await prisma.userModule.update({
+    result = await prisma.userModule.update({
       where: { id: existing.id },
       data: { active: !existing.active },
     });
   } else {
-    await prisma.userModule.create({
+    result = await prisma.userModule.create({
       data: {
-        userId,
+        userId: user.id,
         moduleId,
         active: true,
       },
     });
   }
 
-  return NextResponse.json({ success: true });
+  return NextResponse.json({ success: true, active: result.active });
 }
