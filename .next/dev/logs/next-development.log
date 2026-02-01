@@ -187,3 +187,5 @@
 [01:23:52.124] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
 [01:23:54.838] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [01:23:54.952] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:01:09.800] Server  LOG     ✓ Compiled in 1888ms
+[00:01:59.708] Server  LOG     ✓ Compiled in 9ms
