@@ -1,29 +1,34 @@
-import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
+import { auth } from "@clerk/nextjs/server";
 import { prisma } from "@/lib/prisma";
 
 export async function GET() {
   const { userId } = auth();
+
   if (!userId) {
-    return NextResponse.json([], { status: 200 });
+    return new NextResponse("Unauthorized", { status: 401 });
   }
 
-  const user = await prisma.user.findUnique({
-    where: { clerkId: userId },
+  const modules = await prisma.module.findMany({
+    where: { active: true },
+    orderBy: { name: "asc" },
     include: {
-      modules: true,
+      users: {
+        where: { clerkUserId: userId },
+        select: { enabled: true },
+      },
     },
   });
 
-  const modules = await prisma.module.findMany();
+  const normalized = modules.map((m) => ({
+    id: m.id,
+    key: m.key,
+    name: m.name,
+    description: m.description,
+    icon: m.icon,
+    price: m.price,
+    enabled: m.users[0]?.enabled ?? false,
+  }));
 
-  const enriched = modules.map((m) => {
-    const relation = user?.modules.find((um) => um.moduleId === m.id);
-    return {
-      ...m,
-      active: relation?.active ?? false,
-    };
-  });
-
-  return NextResponse.json(enriched);
+  return NextResponse.json(normalized);
 }

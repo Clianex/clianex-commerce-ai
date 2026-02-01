@@ -1,37 +1,68 @@
+// ============================
+// GENERATOR
+// ============================
 generator client {
   provider = "prisma-client-js"
 }
 
+// ============================
+// DATASOURCE
+// ============================
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id        String       @id
-  email     String?      @unique
-  createdAt DateTime     @default(now())
-  modules   UserModule[]
+// ============================
+// ENUMS
+// ============================
+enum UserRole {
+  OWNER
+  ADMIN
+  USER
 }
 
+// ============================
+// MODELS
+// ============================
+
 model Module {
-  id          String       @id @default(cuid())
-  key         String       @unique
+  id          String  @id @default(cuid())
+  key         String  @unique
   name        String
   description String?
-  createdAt   DateTime     @default(now())
-  users       UserModule[]
+  icon        String?
+  price       Int     @default(0)
+  active      Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users UserModule[]
 }
 
 model UserModule {
-  id        String   @id @default(cuid())
-  userId    String
-  moduleId  String
-  active    Boolean  @default(true)
-  createdAt DateTime @default(now())
+  id          String  @id @default(cuid())
+  clerkUserId String
+  moduleId    String
+  enabled     Boolean @default(true)
 
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
   module Module @relation(fields: [moduleId], references: [id], onDelete: Cascade)
 
-  @@unique([userId, moduleId])
+  @@unique([clerkUserId, moduleId])
+  @@index([clerkUserId])
+}
+
+model UserRoleAssignment {
+  id          String   @id @default(cuid())
+  clerkUserId String
+  role        UserRole @default(USER)
+
+  createdAt DateTime @default(now())
+
+  @@unique([clerkUserId])
+  @@index([role])
 }

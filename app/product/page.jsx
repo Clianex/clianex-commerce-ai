@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+export const dynamic = "force-dynamic";
 const tabs = {
   descripcion: "Producto optimizado por IA con recomendaciones inteligentes.",
   detalles: "Material premium, envío rápido y garantía de satisfacción.",
