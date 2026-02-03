@@ -3,15 +3,16 @@ import { auth } from "@clerk/nextjs/server";
 import { prisma } from "@/lib/prisma";
 
 export async function POST(req: Request) {
-  const { userId } = auth();
+  const { userId } = await auth();
+
   if (!userId) {
-    return new NextResponse("Unauthorized", { status: 401 });
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const { moduleId, enabled } = await req.json();
 
   if (!moduleId || typeof enabled !== "boolean") {
-    return new NextResponse("Bad request", { status: 400 });
+    return NextResponse.json({ error: "Invalid payload" }, { status: 400 });
   }
 
   await prisma.userModule.upsert({
@@ -29,5 +30,5 @@ export async function POST(req: Request) {
     },
   });
 
-  return NextResponse.json({ success: true });
+  return NextResponse.json({ ok: true });
 }

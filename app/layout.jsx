@@ -8,12 +8,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
-        <ClerkProvider>
+    <ClerkProvider>
+      <html lang="es">
+        <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
           {children}
-        </ClerkProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
