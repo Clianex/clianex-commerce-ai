@@ -1,11 +1,11 @@
 import Header from "@/components/layout/Header";
-
+import Footer from "@/components/layout/Footer";
 export default function AboutPage() {
   return (
     <>
       <Header />
 
-      <main className="mx-auto max-w-7xl px-6 py-24">
+      <main className="mx-auto max-w-7xl px-6 py-4">
         {/* Hero */}
         <h1 className="text-5xl font-semibold tracking-tight">
           About Clianex
@@ -83,8 +83,13 @@ export default function AboutPage() {
               to build adaptive AI-driven commerce ecosystems that last.
             </p>
           </div>
-        </section>
+		  
+        </section> 
+		
+		<Footer /> 
+		
       </main>
+
     </>
   );
 }

@@ -1,13 +1,19 @@
 import { auth } from "@clerk/nextjs/server";
+import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 
 export async function POST() {
   const { userId } = await auth();
+  if (!userId) return NextResponse.json({}, { status: 401 });
 
-  if (!userId) {
-    return new NextResponse("Unauthorized", { status: 401 });
-  }
+  await prisma.userRoleAssignment.upsert({
+    where: { clerkUserId: userId },
+    update: {},
+    create: {
+      clerkUserId: userId,
+      role: "USER",
+    },
+  });
 
-  // lógica aquí
   return NextResponse.json({ ok: true });
 }

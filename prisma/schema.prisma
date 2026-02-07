@@ -1,44 +1,27 @@
-// ============================
-// GENERATOR
-// ============================
 generator client {
   provider = "prisma-client-js"
 }
 
-// ============================
-// DATASOURCE
-// ============================
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-// ============================
-// ENUMS
-// ============================
-enum UserRole {
-  OWNER
-  ADMIN
-  USER
-}
-
-// ============================
-// MODELS
-// ============================
-
 model Module {
-  id          String  @id @default(cuid())
-  key         String  @unique
-  name        String
-  description String?
-  icon        String?
-  price       Int     @default(0)
-  active      Boolean @default(true)
+  id            String  @id @default(cuid())
+  key           String  @unique
+  name          String
+  description   String?
+  icon          String?
+  price         Int
+  active        Boolean @default(true)
+  stripePriceId String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  users UserModule[]
+  users     UserModule[]
+  purchases Purchase[]
 }
 
 model UserModule {
@@ -47,22 +30,60 @@ model UserModule {
   moduleId    String
   enabled     Boolean @default(true)
 
+  activePurchaseId String?
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   module Module @relation(fields: [moduleId], references: [id], onDelete: Cascade)
 
+  activePurchase Purchase? @relation("ActivePurchaseRelation", fields: [activePurchaseId], references: [id])
+
   @@unique([clerkUserId, moduleId])
   @@index([clerkUserId])
 }
 
+model Purchase {
+  id          String @id @default(cuid())
+  clerkUserId String
+  moduleId    String
+
+  stripeEventId       String  @unique
+  stripePaymentIntent String  @unique
+  stripeChargeId      String?
+
+  amount   Int
+  currency String
+  status   PurchaseStatus
+
+  createdAt  DateTime  @default(now())
+  refundedAt DateTime?
+
+  module Module @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  userModules UserModule[] @relation("ActivePurchaseRelation")
+
+  @@index([clerkUserId])
+  @@index([moduleId])
+}
+
 model UserRoleAssignment {
   id          String   @id @default(cuid())
-  clerkUserId String
+  clerkUserId String   @unique
   role        UserRole @default(USER)
+  createdAt   DateTime @default(now())
 
-  createdAt DateTime @default(now())
-
-  @@unique([clerkUserId])
   @@index([role])
+}
+
+enum PurchaseStatus {
+  PAID
+  REFUNDED
+  FAILED
+}
+
+enum UserRole {
+  OWNER
+  ADMIN
+  USER
 }
