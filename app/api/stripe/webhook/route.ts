@@ -1,93 +1,60 @@
 import { NextResponse } from "next/server";
 import { headers } from "next/headers";
-import Stripe from "stripe";
+import { stripe } from "@/lib/stripe";
 import { prisma } from "@/lib/prisma";
 
 export const runtime = "nodejs";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2023-08-16",
-});
-
-const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET!;
-
 export async function POST(req: Request) {
   const body = await req.text();
-
-  // ✅ App Router: headers() es async
-  const headersList = await headers();
-  const signature = headersList.get("stripe-signature");
+  const signature = (await headers()).get("stripe-signature");
 
   if (!signature) {
-    return NextResponse.json(
-      { error: "Missing Stripe signature" },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: "Missing signature" }, { status: 400 });
   }
 
-  let event: Stripe.Event;
+  let event;
 
   try {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      endpointSecret
+      process.env.STRIPE_WEBHOOK_SECRET!
     );
-  } catch (err: any) {
-    console.error("❌ Invalid Stripe signature", err.message);
+  } catch (err) {
+    console.error("Webhook signature invalid:", err);
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
 
-  // ✅ Anti-replay (evento duplicado)
-  const alreadyProcessed = await prisma.purchase.findUnique({
+  // 🔒 Evitar duplicados
+  const existing = await prisma.purchase.findUnique({
     where: { stripeEventId: event.id },
   });
 
-  if (alreadyProcessed) {
+  if (existing) {
     return NextResponse.json({ received: true });
   }
 
   try {
     switch (event.type) {
-      // ===============================
-      // ✅ PAGO COMPLETADO
-      // ===============================
       case "checkout.session.completed": {
-        const session = event.data.object as Stripe.Checkout.Session;
-        const metadata = session.metadata ?? {};
-        const { clerkUserId, moduleId } = metadata;
+        const session = event.data.object as any;
 
-        if (!clerkUserId || !moduleId) {
-          throw new Error("Missing metadata (clerkUserId / moduleId)");
-        }
+        const clerkUserId = session.metadata.clerkUserId;
+        const moduleId = session.metadata.moduleId;
 
-        const paymentIntentId = session.payment_intent as string;
-
-        // Recuperar el PaymentIntent para obtener el charge
-        const paymentIntent = await stripe.paymentIntents.retrieve(
-          paymentIntentId
-        );
-
-        const chargeId =
-          typeof paymentIntent.latest_charge === "string"
-            ? paymentIntent.latest_charge
-            : null;
-
-        // Crear compra
         const purchase = await prisma.purchase.create({
           data: {
             clerkUserId,
             moduleId,
             stripeEventId: event.id,
-            stripePaymentIntent: paymentIntentId,
-            stripeChargeId: chargeId,
-            amount: session.amount_total ?? 0, // EN CÉNTIMOS
-            currency: session.currency ?? "eur",
+            stripePaymentIntent: session.payment_intent,
+            amount: session.amount_total,
+            currency: session.currency,
             status: "PAID",
           },
         });
 
-        // Activar módulo
         await prisma.userModule.upsert({
           where: {
             clerkUserId_moduleId: { clerkUserId, moduleId },
@@ -107,81 +74,38 @@ export async function POST(req: Request) {
         break;
       }
 
-      // ===============================
-      // 🔄 REEMBOLSO
-      // ===============================
       case "charge.refunded": {
-        const charge = event.data.object as Stripe.Charge;
-
-        if (!charge.payment_intent) break;
+        const charge = event.data.object as any;
 
         const purchase = await prisma.purchase.findUnique({
-          where: {
-            stripePaymentIntent: charge.payment_intent as string,
-          },
+          where: { stripePaymentIntent: charge.payment_intent },
         });
 
-        if (!purchase) break;
+        if (purchase) {
+          await prisma.purchase.update({
+            where: { id: purchase.id },
+            data: {
+              status: "REFUNDED",
+              refundedAt: new Date(),
+            },
+          });
 
-        await prisma.purchase.update({
-          where: { id: purchase.id },
-          data: {
-            status: "REFUNDED",
-            refundedAt: new Date(),
-          },
-        });
-
-        await prisma.userModule.updateMany({
-          where: { activePurchaseId: purchase.id },
-          data: {
-            enabled: false,
-            activePurchaseId: null,
-          },
-        });
-
-        break;
-      }
-
-      // ===============================
-      // ❌ PAGO FALLIDO
-      // ===============================
-      case "payment_intent.payment_failed": {
-        const intent = event.data.object as Stripe.PaymentIntent;
-
-        const purchase = await prisma.purchase.findUnique({
-          where: { stripePaymentIntent: intent.id },
-        });
-
-        if (!purchase) break;
-
-        await prisma.purchase.update({
-          where: { id: purchase.id },
-          data: {
-            status: "FAILED",
-          },
-        });
-
-        await prisma.userModule.updateMany({
-          where: { activePurchaseId: purchase.id },
-          data: {
-            enabled: false,
-            activePurchaseId: null,
-          },
-        });
+          await prisma.userModule.updateMany({
+            where: { activePurchaseId: purchase.id },
+            data: { enabled: false, activePurchaseId: null },
+          });
+        }
 
         break;
       }
 
       default:
-        console.log("ℹ️ Evento Stripe no manejado:", event.type);
+        console.log("Unhandled event:", event.type);
     }
 
     return NextResponse.json({ received: true });
   } catch (err) {
-    console.error("🔥 Error procesando webhook:", err);
-    return NextResponse.json(
-      { error: "Webhook processing failed" },
-      { status: 500 }
-    );
+    console.error("Webhook processing error:", err);
+    return NextResponse.json({ error: "Processing error" }, { status: 500 });
   }
 }

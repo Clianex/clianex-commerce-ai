@@ -1,34 +1,27 @@
 import { NextResponse } from "next/server";
-import { auth } from "@clerk/nextjs/server";
 import { prisma } from "@/lib/prisma";
 
 export async function GET() {
-  const { userId } = await auth();
+  try {
+    const modules = await prisma.module.findMany({
+      where: { active: true },
+      orderBy: { createdAt: "asc" },
+    });
 
-  if (!userId) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    const result = modules.map((m) => ({
+      id: m.id,
+      key: m.key,
+      name: m.name,
+      description: m.description,
+      price: m.price,
+      stripePriceId: m.stripePriceId,
+      active: m.active,
+      enabled: false, // se actualizará si el usuario ya lo compró
+    }));
+
+    return NextResponse.json(result);
+  } catch (error) {
+    console.error("❌ /api/modules error:", error);
+    return NextResponse.json({ error: "Failed to load modules" }, { status: 500 });
   }
-
-  const modules = await prisma.module.findMany({
-    where: { active: true },
-    orderBy: { name: "asc" },
-    include: {
-      users: {
-        where: { clerkUserId: userId },
-        select: { enabled: true },
-      },
-    },
-  });
-
-  const formatted = modules.map((m) => ({
-    id: m.id,
-    key: m.key,
-    name: m.name,
-    description: m.description,
-    icon: m.icon,
-    price: m.price,
-    enabled: m.users[0]?.enabled ?? false,
-  }));
-
-  return NextResponse.json(formatted);
 }

@@ -1,5 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import "./globals.css";
+import "@/globals.css";
 
 export default function RootLayout({
   children,
@@ -9,10 +9,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="es">
-        <body className="bg-neutral-950 text-white">
-          {/* Header aquí (puede detectar user) */}
-          {children}
-        </body>
+        <body>{children}</body>
       </html>
     </ClerkProvider>
   );

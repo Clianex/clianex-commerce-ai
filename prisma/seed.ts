@@ -1,6 +1,11 @@
-import { prisma } from "@/lib/prisma";
+// prisma/seed.ts
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 async function main() {
+  console.log("🌱 Seeding database...");
+
   await prisma.module.createMany({
     skipDuplicates: true,
     data: [
@@ -9,7 +14,7 @@ async function main() {
         name: "Autoblogging",
         description: "Publicación automática con IA",
         price: 2900,
-        stripePriceId: "price_AUTOBLOGGING_PLACEHOLDER",
+        stripePriceId: "price_1T1VxRBhZge61srdWQVxZ15O", // ← CAMBIAR por el real de Stripe
         active: true,
       },
       {
@@ -17,19 +22,18 @@ async function main() {
         name: "Billing",
         description: "Gestión de pagos y facturación",
         price: 0,
-        stripePriceId: "free",
+        stripePriceId: "price_BILLING", // ← si es gratis puedes dejar dummy
         active: true,
       },
     ],
   });
+
+  console.log("✅ Modules seeded");
 }
 
 main()
-  .then(() => {
-    console.log("✅ Seed ejecutado correctamente");
-  })
   .catch((e) => {
-    console.error(e);
+    console.error("❌ Seed error:", e);
     process.exit(1);
   })
   .finally(async () => {

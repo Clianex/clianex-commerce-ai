@@ -1,19 +1,29 @@
+// /lib/roles.ts
 import { prisma } from "@/lib/prisma";
-import { UserRole } from "@prisma/client";
 
-export async function getUserRole(clerkUserId: string): Promise<UserRole> {
-  const role = await prisma.userRoleAssignment.findUnique({
+export type UserRole = "OWNER" | "ADMIN" | "USER";
+
+/**
+ * Devuelve el rol del usuario o USER por defecto
+ */
+export async function getUserRole(
+  clerkUserId: string
+): Promise<UserRole> {
+  const record = await prisma.userRoleAssignment.findUnique({
     where: { clerkUserId },
     select: { role: true },
   });
 
-  return role?.role ?? "USER";
+  return record?.role ?? "USER";
 }
 
+/**
+ * Verifica si el usuario tiene uno de los roles permitidos
+ */
 export async function requireRole(
   clerkUserId: string,
-  allowed: UserRole[]
+  allowedRoles: UserRole[]
 ): Promise<boolean> {
   const role = await getUserRole(clerkUserId);
-  return allowed.includes(role);
+  return allowedRoles.includes(role);
 }

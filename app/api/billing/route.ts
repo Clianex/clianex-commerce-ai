@@ -3,80 +3,53 @@ import { auth } from "@clerk/nextjs/server";
 import { prisma } from "@/lib/prisma";
 import { stripe } from "@/lib/stripe";
 
-/**
- * POST /api/billing
- * Body: { moduleKey: string }
- */
 export async function POST(req: Request) {
   try {
-    // 1️⃣ Autenticación Clerk (SIEMPRE await)
-    const { userId } = await auth();
+    const session = await auth();
+    const userId = session.userId;
 
     if (!userId) {
-      return NextResponse.json(
-        { error: "Unauthorized" },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // 2️⃣ Leer body
-    const body = await req.json();
-    const { moduleKey } = body;
+    const { moduleId } = await req.json();
 
-    if (!moduleKey || typeof moduleKey !== "string") {
+    const module = await prisma.module.findUnique({
+      where: { id: moduleId },
+    });
+
+    if (!module || !module.active) {
+      return NextResponse.json({ error: "Module not found" }, { status: 404 });
+    }
+
+    if (!module.stripePriceId) {
       return NextResponse.json(
-        { error: "Invalid moduleKey" },
+        { error: "Module not configured for Stripe" },
         { status: 400 }
       );
     }
 
-    // 3️⃣ Buscar módulo en BD
-    const module = await prisma.module.findUnique({
-      where: { key: moduleKey },
-    });
-
-    if (!module || !module.active) {
-      return NextResponse.json(
-        { error: "Module not available" },
-        { status: 404 }
-      );
-    }
-
-    // 4️⃣ Crear sesión de Stripe (pago único)
-    const session = await stripe.checkout.sessions.create({
+    // Crear sesión checkout
+    const checkoutSession = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
       line_items: [
         {
-          price_data: {
-            currency: "eur",
-            unit_amount: module.price, // en céntimos
-            product_data: {
-              name: module.name,
-              description: module.description ?? undefined,
-            },
-          },
+          price: module.stripePriceId,
           quantity: 1,
         },
       ],
       metadata: {
         clerkUserId: userId,
-        moduleKey: module.key,
+        moduleId: module.id,
       },
-      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/dashboard/modules?success=1`,
-      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/marketplace?canceled=1`,
+      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/dashboard?success=true`,
+      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/marketplace?canceled=true`,
     });
 
-    // 5️⃣ Respuesta
-    return NextResponse.json({
-      checkoutUrl: session.url,
-    });
-  } catch (error) {
-    console.error("Billing error:", error);
-
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return NextResponse.json({ url: checkoutSession.url });
+  } catch (err) {
+    console.error("Billing error:", err);
+    return NextResponse.json({ error: "Internal error" }, { status: 500 });
   }
 }

@@ -6,77 +6,53 @@ export type ModuleItem = {
   id: string;
   key: string;
   name: string;
-  description?: string | null;
+  description: string | null;
   price: number;
-  active: boolean;
-  enabled?: boolean;
+  icon: string | null;
 };
 
 type ModuleGridProps = {
   modules: ModuleItem[];
-  onToggle?: (moduleKey: string, enabled: boolean) => Promise<void>;
 };
 
-export default function ModuleGrid({
-  modules,
-  onToggle,
-}: ModuleGridProps) {
-  const [loadingKey, setLoadingKey] = useState<string | null>(null);
+export default function ModuleGrid({ modules }: ModuleGridProps) {
+  const [loadingId, setLoadingId] = useState<string | null>(null);
 
-  async function handleToggle(module: ModuleItem) {
-    if (!onToggle) return;
+  async function handleBuy(moduleId: string) {
+    setLoadingId(moduleId);
 
-    setLoadingKey(module.key);
-    try {
-      await onToggle(module.key, !module.enabled);
-    } finally {
-      setLoadingKey(null);
-    }
+    const res = await fetch("/api/billing", {
+      method: "POST",
+      body: JSON.stringify({ moduleId }),
+    });
+
+    const data = await res.json();
+    window.location.href = data.url;
   }
 
   return (
-    <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {modules.map((module) => (
-        <div
-          key={module.id}
-          className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between"
-        >
-          <div>
-            <h3 className="text-lg font-semibold">{module.name}</h3>
-            {module.description && (
-              <p className="mt-2 text-sm text-muted-foreground">
-                {module.description}
-              </p>
-            )}
-          </div>
+        <div key={module.id} className="rounded-xl border p-6 space-y-4">
+          <h3 className="text-lg font-semibold">{module.name}</h3>
 
-          <div className="mt-6 flex items-center justify-between">
-            <span className="text-sm font-medium">
-              {module.price === 0
-                ? "Gratis"
-                : `${(module.price / 100).toFixed(2)} €`}
-            </span>
+          <p className="text-sm text-muted-foreground">
+            {module.description}
+          </p>
 
-            {onToggle && (
-              <button
-                onClick={() => handleToggle(module)}
-                disabled={loadingKey === module.key}
-                className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
-                  module.enabled
-                    ? "bg-destructive text-destructive-foreground hover:opacity-90"
-                    : "bg-primary text-primary-foreground hover:opacity-90"
-                }`}
-              >
-                {loadingKey === module.key
-                  ? "..."
-                  : module.enabled
-                  ? "Desactivar"
-                  : "Activar"}
-              </button>
-            )}
-          </div>
+          <p className="text-xl font-medium">
+            {(module.price / 100).toFixed(2)} €
+          </p>
+
+          <button
+            onClick={() => handleBuy(module.id)}
+            disabled={loadingId === module.id}
+            className="w-full rounded-lg bg-primary px-4 py-2 text-primary-foreground"
+          >
+            {loadingId === module.id ? "Redirigiendo…" : "Comprar"}
+          </button>
         </div>
       ))}
-    </section>
+    </div>
   );
 }
