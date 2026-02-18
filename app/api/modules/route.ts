@@ -1,27 +1,29 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export async function GET() {
+export const runtime = "nodejs";
+
+export async function GET(): Promise<NextResponse> {
   try {
     const modules = await prisma.module.findMany({
       where: { active: true },
-      orderBy: { createdAt: "asc" },
+      select: {
+        id: true,
+        key: true,
+        name: true,
+        description: true,
+        price: true,
+        active: true,
+      },
+      orderBy: { name: "asc" },
     });
 
-    const result = modules.map((m) => ({
-      id: m.id,
-      key: m.key,
-      name: m.name,
-      description: m.description,
-      price: m.price,
-      stripePriceId: m.stripePriceId,
-      active: m.active,
-      enabled: false, // se actualizará si el usuario ya lo compró
-    }));
-
-    return NextResponse.json(result);
-  } catch (error) {
-    console.error("❌ /api/modules error:", error);
-    return NextResponse.json({ error: "Failed to load modules" }, { status: 500 });
+    return NextResponse.json(modules);
+  } catch (err) {
+    console.error("[api/modules] Error:", err);
+    return NextResponse.json(
+      { error: "No se pudieron cargar los módulos" },
+      { status: 500 }
+    );
   }
 }
